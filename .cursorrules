@@ -20,7 +20,11 @@ hcde530/
 ├── Week 2/
 │   ├── demo_dashboard.html
 │   ├── demo_responses.csv
-│   └── demo_word_count.py
+│   ├── demo_word_count.py
+│   ├── response_word_analysis.py
+│   ├── response_word_stats_output.csv
+│   ├── sample_responses.csv
+│   └── week2.md
 ├── .cursorrules
 ├── .gitignore
 ├── PROJECT_CONTEXT.md
