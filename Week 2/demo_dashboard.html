@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Demo responses dashboard</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --border: #2d3a4d;
+      --text: #e8edf4;
+      --muted: #8b9cb3;
+      --accent: #5b9bd5;
+      --accent-dim: #3d7ab8;
+      --role-uxr: #7c9cff;
+      --role-uxd: #5fd4a5;
+      --role-pm: #ffb86b;
+      --role-cs: #d4a5ff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(1200px 600px at 10% -10%, #1a2840 0%, transparent 50%),
+                  radial-gradient(800px 400px at 90% 0%, #1a3040 0%, transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+    header {
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.35rem;
+    }
+    header p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .kpi {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+    }
+    .kpi .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin-bottom: 0.35rem;
+    }
+    .kpi .value {
+      font-size: 1.65rem;
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--accent);
+    }
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem 1.35rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    section h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 1rem;
+      letter-spacing: -0.01em;
+    }
+    .bars { display: flex; flex-direction: column; gap: 0.65rem; }
+    .bar-row {
+      display: grid;
+      grid-template-columns: minmax(140px, 1fr) 1fr 42px;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+    }
+    .bar-row .name { color: var(--muted); }
+    .bar-track {
+      height: 10px;
+      background: #0f1419;
+      border-radius: 6px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .bar-fill {
+      height: 100%;
+      border-radius: 5px;
+      transition: width 0.35s ease;
+    }
+    .bar-row .pct {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .tools label { font-size: 0.85rem; color: var(--muted); }
+    .tools input[type="search"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f1419;
+      color: var(--text);
+      font: inherit;
+    }
+    .tools select {
+      padding: 0.45rem 0.65rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0f1419;
+      color: var(--text);
+      font: inherit;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.55rem 0.65rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    th:hover { color: var(--accent); }
+    th.sorted::after {
+      content: " \\25bc";
+      font-size: 0.65em;
+      opacity: 0.8;
+    }
+    th.sorted.asc::after { content: " \\25b2"; }
+    td.id { font-variant-numeric: tabular-nums; color: var(--accent); font-weight: 600; width: 3rem; }
+    td.words { font-variant-numeric: tabular-nums; width: 4rem; }
+    td.role { white-space: nowrap; }
+    td.preview { color: var(--muted); max-width: 420px; }
+    tr:hover td { background: rgba(91, 155, 213, 0.06); }
+    .pill {
+      display: inline-block;
+      padding: 0.15rem 0.45rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    footer {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    @media (max-width: 640px) {
+      .bar-row { grid-template-columns: 1fr; gap: 0.25rem; }
+      .bar-row .pct { text-align: left; }
+      table { font-size: 0.8rem; }
+      th, td { padding: 0.45rem 0.35rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Research practice responses</h1>
+      <p>Dashboard for <code>demo_responses.csv</code> — participant roles, word counts, and full text.</p>
+    </header>
+
+    <div class="kpi-grid" id="kpi" aria-live="polite"></div>
+
+    <section aria-labelledby="role-heading">
+      <h2 id="role-heading">Responses by role</h2>
+      <div class="bars" id="role-bars"></div>
+    </section>
+
+    <section aria-labelledby="table-heading">
+      <h2 id="table-heading">All responses</h2>
+      <div class="tools">
+        <label for="q">Filter</label>
+        <input type="search" id="q" placeholder="Search ID, role, or response text…" autocomplete="off" />
+        <label for="role-filter">Role</label>
+        <select id="role-filter" aria-label="Filter by role">
+          <option value="">All roles</option>
+        </select>
+      </div>
+      <div style="overflow-x: auto;">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col" data-sort="id">ID</th>
+              <th scope="col" data-sort="role">Role</th>
+              <th scope="col" data-sort="words">Words</th>
+              <th scope="col">Response preview</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      Word counts match <code>demo_word_count.py</code> (split on whitespace).
+    </footer>
+  </div>
+
+  <script type="application/json" id="embedded-data">[{"participant_id": "P01", "role": "UX Researcher", "response": "I usually start by reviewing whatever documentation exists, but honestly most of the time there isn't much. I end up doing a lot of stakeholder interviews just to figure out what the product is actually supposed to do."}, {"participant_id": "P02", "role": "UX Designer", "response": "The hardest part is getting engineers to understand why we need more than two weeks for discovery. They always want to jump straight to wireframes. I've started framing research as risk reduction and that helps a little."}, {"participant_id": "P03", "role": "Product Manager", "response": "We run two-week sprints and research keeps getting squeezed into the first three days. By the time we have findings, the design decisions are already made. I don't know how to fix that."}, {"participant_id": "P04", "role": "UX Researcher", "response": "Recruiting is always the bottleneck. We spend more time finding participants than actually running sessions. I wish we had a panel we could pull from instead of starting from scratch every time."}, {"participant_id": "P05", "role": "Content Strategist", "response": "Nobody invites me into the research phase. I find out what users said in the readout and by then the IA is already locked. The language problems surface in usability testing three months later."}, {"participant_id": "P06", "role": "UX Designer", "response": "I've started doing five-minute hallway tests with anyone I can find. It's not rigorous but it's faster than waiting for a formal study to get scheduled and approved."}, {"participant_id": "P07", "role": "UX Researcher", "response": "The synthesis step is where we lose people. Everyone attends the sessions but nobody wants to sit through two days of affinity mapping. I've tried doing it async with Miro but participation drops off."}, {"participant_id": "P08", "role": "Product Manager", "response": "My biggest frustration is that research findings don't translate into decisions. We get a deck with quotes and themes and then everyone nods and goes back to doing what they planned to do anyway."}, {"participant_id": "P09", "role": "UX Designer", "response": "I find it really hard to push back when someone senior says they already know what users want. Even when I have data that contradicts them."}, {"participant_id": "P10", "role": "UX Researcher", "response": "Remote sessions have actually improved our geographic diversity. We used to only talk to people in Seattle. Now we regularly include participants from smaller cities and that's changed some of our assumptions."}, {"participant_id": "P11", "role": "Content Strategist", "response": "I've been trying to introduce plain language principles but the legal team always pushes back. They want specific wording that users consistently misread in testing. It's a constant negotiation."}, {"participant_id": "P12", "role": "Product Manager", "response": "We don't have a dedicated researcher on my team so I end up doing interviews myself. I'm not sure I'm doing them well but it's better than not doing them at all."}, {"participant_id": "P13", "role": "UX Designer", "response": "The gap between what users say they do and what they actually do is real. I had a participant tell me they always read the confirmation email and then in the diary study we ran they never opened a single one."}, {"participant_id": "P14", "role": "UX Researcher", "response": "I'm spending more time writing reports that nobody reads than actually doing research. I've been experimenting with shorter formats, like a one-page brief, and that gets more engagement."}, {"participant_id": "P15", "role": "Product Manager", "response": "Our design system has made things more consistent but it's also made some teams less willing to question patterns that don't actually work for their users. Convention becomes a crutch."}, {"participant_id": "P16", "role": "UX Designer", "response": "I've started including a confidence rating in my recommendations, like this is high confidence from multiple sources versus this is directional from a single session. It's changed how people receive the findings."}, {"participant_id": "P17", "role": "UX Researcher", "response": "Accessibility keeps getting treated as a compliance checklist instead of a design constraint. I've had the most success when I can get an assistive technology user into a session early because seeing it is harder to argue with than reading about it."}, {"participant_id": "P18", "role": "Content Strategist", "response": "Error messages are the last thing anyone thinks about and the first thing users notice when something goes wrong. I've been trying to get them into scope earlier but they always end up being a handoff item."}, {"participant_id": "P19", "role": "UX Designer", "response": "I struggle with knowing when I have enough data. There's always pressure to do one more round but at some point you're validating what you already know."}, {"participant_id": "P20", "role": "Product Manager", "response": "The most useful thing research has done for us is help us stop building things. We killed two features last quarter based on findings and that felt like a win even though it's hard to show in a metric."}, {"participant_id": "P21", "role": "UX Researcher", "response": "We've been using AI to help with transcript analysis and it speeds things up but I always do a pass myself because it flattens nuance. It's good at finding patterns and bad at knowing which ones matter."}, {"participant_id": "P22", "role": "UX Designer", "response": "Onboarding is where our product falls apart and everyone knows it but there's no owner. Product thinks it's design, design thinks it's content, content thinks it's engineering. The user just bounces."}, {"participant_id": "P23", "role": "Content Strategist", "response": "I've been pushing for a terminology audit across the product for two years. Different parts of the app use different words for the same thing and users notice even if they can't articulate why."}, {"participant_id": "P24", "role": "UX Researcher", "response": "The best sessions I run are the ones where I say almost nothing. The worst are when I'm trying to cover too many topics and I end up steering instead of listening."}, {"participant_id": "P25", "role": "Product Manager", "response": "We did a diary study last year and the data was incredible but we've never had the budget or time to do another one. I think longitudinal research is undersold in product teams."}]</script>
+  <script>
+(function () {
+  const raw = document.getElementById("embedded-data").textContent;
+  const rows = JSON.parse(raw);
+
+  function wordCount(s) {
+    const t = (s || "").trim();
+    if (!t) return 0;
+    return t.split(/\s+/).length;
+  }
+
+  const enriched = rows.map((r) => ({
+    ...r,
+    words: wordCount(r.response),
+  }));
+
+  const words = enriched.map((r) => r.words);
+  const total = enriched.length;
+  const sum = words.reduce((a, b) => a + b, 0);
+  const avg = total ? sum / total : 0;
+  const min = total ? Math.min(...words) : 0;
+  const max = total ? Math.max(...words) : 0;
+
+  const roleColors = {
+    "UX Researcher": "var(--role-uxr)",
+    "UX Designer": "var(--role-uxd)",
+    "Product Manager": "var(--role-pm)",
+    "Content Strategist": "var(--role-cs)",
+  };
+
+  function el(tag, attrs, children) {
+    const node = document.createElement(tag);
+    if (attrs) for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") node.className = v;
+      else if (k.startsWith("aria")) node.setAttribute(k, v);
+      else node[k] = v;
+    }
+    (children || []).forEach((c) => {
+      if (typeof c === "string") node.appendChild(document.createTextNode(c));
+      else if (c) node.appendChild(c);
+    });
+    return node;
+  }
+
+  const kpi = document.getElementById("kpi");
+  [
+    ["Total responses", String(total)],
+    ["Average words", avg.toFixed(1)],
+    ["Shortest", String(min)],
+    ["Longest", String(max)],
+  ].forEach(([label, val]) => {
+    kpi.appendChild(
+      el("div", { class: "kpi" }, [
+        el("div", { class: "label" }, [label]),
+        el("div", { class: "value" }, [val]),
+      ])
+    );
+  });
+
+  const byRole = {};
+  enriched.forEach((r) => {
+    byRole[r.role] = (byRole[r.role] || 0) + 1;
+  });
+  const roleNames = Object.keys(byRole).sort((a, b) => byRole[b] - byRole[a]);
+  const maxRole = Math.max(...Object.values(byRole), 1);
+
+  const bars = document.getElementById("role-bars");
+  roleNames.forEach((name) => {
+    const n = byRole[name];
+    const pct = total ? Math.round((n / total) * 100) : 0;
+    const w = Math.round((n / maxRole) * 100);
+    const row = el("div", { class: "bar-row" });
+    row.appendChild(el("span", { class: "name" }, [name]));
+    const track = el("div", { class: "bar-track" });
+    track.appendChild(
+      el("div", {
+        class: "bar-fill",
+        style: "width:" + w + "%;background:" + (roleColors[name] || "var(--accent)"),
+        title: n + " responses (" + pct + "%)",
+      })
+    );
+    row.appendChild(track);
+    row.appendChild(el("span", { class: "pct" }, [n + " (" + pct + "%)"]));
+    bars.appendChild(row);
+  });
+
+  const roleSel = document.getElementById("role-filter");
+  roleNames.forEach((name) => {
+    roleSel.appendChild(el("option", { value: name }, [name + " (" + byRole[name] + ")"]));
+  });
+
+  let sortKey = "id";
+  let sortAsc = true;
+
+  function rolePill(role) {
+    const span = el("span", { class: "pill" });
+    span.style.background = "color-mix(in srgb, " + (roleColors[role] || "var(--accent)") + " 22%, transparent)";
+    span.style.color = roleColors[role] || "var(--accent)";
+    span.textContent = role;
+    return span;
+  }
+
+  function preview(text, max) {
+    if (text.length <= max) return text;
+    return text.slice(0, max).trim() + "…";
+  }
+
+  function cmp(a, b, key) {
+    if (key === "words") return a.words - b.words;
+    if (key === "role") return a.role.localeCompare(b.role);
+    return a.participant_id.localeCompare(b.participant_id, undefined, { numeric: true });
+  }
+
+  function renderTable(list) {
+    const tbody = document.getElementById("tbody");
+    tbody.replaceChildren();
+    list.forEach((r) => {
+      const tr = el("tr");
+      tr.appendChild(el("td", { class: "id" }, [r.participant_id]));
+      const tdRole = el("td", { class: "role" });
+      tdRole.appendChild(rolePill(r.role));
+      tr.appendChild(tdRole);
+      tr.appendChild(el("td", { class: "words" }, [String(r.words)]));
+      tr.appendChild(el("td", { class: "preview" }, [preview(r.response, 160)]));
+      tbody.appendChild(tr);
+    });
+  }
+
+  function sortedCopy(arr) {
+    const out = arr.slice().sort((a, b) => {
+      const v = cmp(a, b, sortKey);
+      return sortAsc ? v : -v;
+    });
+    return out;
+  }
+
+  function filterList() {
+    const q = document.getElementById("q").value.trim().toLowerCase();
+    const rf = document.getElementById("role-filter").value;
+    return enriched.filter((r) => {
+      if (rf && r.role !== rf) return false;
+      if (!q) return true;
+      return (
+        r.participant_id.toLowerCase().includes(q) ||
+        r.role.toLowerCase().includes(q) ||
+        r.response.toLowerCase().includes(q)
+      );
+    });
+  }
+
+  function refresh() {
+    renderTable(sortedCopy(filterList()));
+    document.querySelectorAll("th[data-sort]").forEach((th) => {
+      th.classList.remove("sorted", "asc");
+      if (th.dataset.sort === sortKey) {
+        th.classList.add("sorted");
+        if (sortAsc) th.classList.add("asc");
+      }
+    });
+  }
+
+  document.getElementById("q").addEventListener("input", refresh);
+  document.getElementById("role-filter").addEventListener("change", refresh);
+
+  document.querySelectorAll("th[data-sort]").forEach((th) => {
+    th.addEventListener("click", () => {
+      const k = th.dataset.sort;
+      if (sortKey === k) sortAsc = !sortAsc;
+      else {
+        sortKey = k;
+        sortAsc = k === "id" || k === "role";
+      }
+      refresh();
+    });
+  });
+
+  refresh();
+})();
+  </script>
+</body>
+</html>
