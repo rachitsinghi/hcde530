@@ -1,0 +1,50 @@
+# HCDE 530 — project context for AI assistants
+
+## Directory structure (auto-generated)
+
+Run after adding, removing, or renaming files so this stays accurate:
+
+```bash
+python3 scripts/refresh_cursorrules_tree.py
+```
+
+Agents should run that command (or edit the fenced block between the HTML comments) whenever they change the repo layout.
+
+<!-- PROJECT_TREE_BEGIN -->
+```
+hcde530/
+├── .githooks/
+│   └── pre-commit
+├── scripts/
+│   └── refresh_cursorrules_tree.py
+├── Week 2/
+│   ├── demo_dashboard.html
+│   ├── demo_responses.csv
+│   └── demo_word_count.py
+├── .cursorrules
+├── .gitignore
+├── PROJECT_CONTEXT.md
+└── README.md
+```
+<!-- PROJECT_TREE_END -->
+
+## What this repo is
+Course work for HCDE 530: small Python scripts, CSV data, and occasional static HTML dashboards. Weekly materials live under `Week N/` folders. **Human-facing overview:** **`README.md`**. For goals, audience, and HCD-oriented coding preferences, read **`PROJECT_CONTEXT.md`** at the repo root.
+
+## Python
+- Prefer the standard library (`csv`, `pathlib`, etc.) unless the assignment or existing code already uses a dependency.
+- **File paths:** When a script reads or writes files next to the script (e.g. `demo_responses.csv`), build paths with `Path(__file__).resolve().parent / "filename"` so the script works regardless of the shell’s current working directory.
+- **Running scripts:** From the repo root use e.g. `python3 "Week 2/demo_word_count.py"`; paths use `Path(__file__)` so data files resolve next to the script.
+
+## HTML / dashboards
+- Favor **self-contained** static HTML (embedded data or inline scripts) when dashboards must open via `file://` without a local server.
+- Keep styling readable and accessible (contrast, semantic headings, table headers).
+
+## Git
+- Do not commit `.DS_Store` or other OS junk; use `.gitignore`.
+- Use clear commit messages; keep commits focused on one logical change.
+- **Hooks:** After cloning, run once from the repo root: `git config core.hooksPath .githooks` (relative path). The pre-commit hook runs `scripts/refresh_cursorrules_tree.py` and re-stages `.cursorrules` so the directory tree stays current.
+
+## Style
+- Match the simplicity and tone of existing week files: short scripts, clear variable names, minimal abstraction unless the task grows.
+- Do not refactor unrelated files or add dependencies without a clear need from the user or assignment.
