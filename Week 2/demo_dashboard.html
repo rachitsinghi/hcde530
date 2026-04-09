@@ -269,6 +269,8 @@
     if (attrs) for (const [k, v] of Object.entries(attrs)) {
       if (k === "class") node.className = v;
       else if (k.startsWith("aria")) node.setAttribute(k, v);
+      // style is a CSSStyleDeclaration — assign the full rule string via cssText, not node.style = string
+      else if (k === "style") node.style.cssText = v;
       else node[k] = v;
     }
     (children || []).forEach((c) => {

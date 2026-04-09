@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 
-# CSV lives next to this script (works no matter which folder you run from)
+# CSV lives next to this script — resolve via __file__ so this runs from any cwd (e.g. repo root or Week 2/).
 filename = Path(__file__).resolve().parent / "demo_responses.csv"
 responses = []
 
