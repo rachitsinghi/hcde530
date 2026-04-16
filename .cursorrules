@@ -25,6 +25,13 @@ hcde530/
 │   ├── response_word_stats_output.csv
 │   ├── sample_responses.csv
 │   └── week2.md
+├── Week 3/
+│   ├── clean_responses.py
+│   ├── count_roles.py
+│   ├── responses.csv
+│   ├── role_counts.csv
+│   ├── week3_analysis_buggy.py
+│   └── week3_survey_messy.csv
 ├── .cursorrules
 ├── .gitignore
 ├── PROJECT_CONTEXT.md
