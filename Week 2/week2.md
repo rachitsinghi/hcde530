@@ -1,3 +1,6 @@
+C2 — Code Literacy and Documentation
+Code literacy was achieved by building functions for clarity and reuse purposes and then explaining the logic behind them through proper inline comments. Some of those functions include the following, which have been defined for their inputs, outputs, and functionality: count_words() and word_count(). In addition, I have written some explanatory comments to guide someone on certain decisions, such as finding the file path through __file__. Furthermore, I converted this logic to a visually appealing dashboard to make the process of data analysis more user-friendly and interpretable for the end-user.
+
 # Week 2 — Competency 2: Code literacy & documentation
 
 **Competency 2** in HCDE 530 is about **code literacy** (reading, running, and reasoning about small programs and data pipelines) and **documentation** (making work understandable to your future self, peers, and reviewers).
