@@ -31,6 +31,7 @@ hcde530/
 │   ├── responses.csv
 │   ├── responses_cleaned.csv
 │   ├── role_counts.csv
+│   ├── week3.md
 │   ├── week3_analysis_buggy.py
 │   ├── week3_analysis_output.csv
 │   └── week3_survey_messy.csv
