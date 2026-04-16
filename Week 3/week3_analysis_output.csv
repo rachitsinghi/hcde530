@@ -1,0 +1,52 @@
+section,category,name,value
+summary,n_responses,,35
+summary,avg_experience_years,,7.3143
+role_counts,role,(no role),1
+role_counts,role,Content Strategist,6
+role_counts,role,Product Manager,6
+role_counts,role,Ux Designer,10
+role_counts,role,Ux Researcher,12
+satisfaction_top,rank_1,Priya Nair,5
+satisfaction_top,rank_2,Fatima Al-Rashid,5
+satisfaction_top,rank_3,Lena Kowalski,5
+satisfaction_top,rank_4,Noel Adeyemi,5
+satisfaction_top,rank_5,Marco Di Luca,5
+satisfaction_low,rank_1,James Okafor,1
+satisfaction_low,rank_2,Jerome Williams,1
+satisfaction_low,rank_3,Marcus Webb,2
+satisfaction_low,rank_4,Carlos Reyes,2
+satisfaction_low,rank_5,Brianna Cole,2
+theme_response_counts,theme,"Reliability & failures (broken flows, errors, regressions)",8
+theme_response_counts,theme,"Delight & advocacy (love, excellence, recommendations)",6
+theme_response_counts,theme,"Findability & navigation (discoverability, IA, onboarding)",5
+theme_response_counts,theme,"Performance & responsiveness (slow UI, lag, loading, sync)",4
+theme_response_counts,theme,Collaboration & multi-user friction,3
+theme_response_counts,theme,Documentation & clarity,2
+theme_response_counts,theme,"Mobile, density, and ergonomics",2
+theme_response_counts,theme,Notification & attention overload,1
+top_theme,tied_winner,"Reliability & failures (broken flows, errors, regressions)",8
+theme_by_role,"Reliability & failures (broken flows, errors, regressions)",Content Strategist,2
+theme_by_role,"Reliability & failures (broken flows, errors, regressions)",Product Manager,2
+theme_by_role,"Reliability & failures (broken flows, errors, regressions)",Ux Designer,2
+theme_by_role,"Reliability & failures (broken flows, errors, regressions)",Ux Researcher,2
+theme_by_role,"Delight & advocacy (love, excellence, recommendations)",Ux Designer,2
+theme_by_role,"Delight & advocacy (love, excellence, recommendations)",Ux Researcher,4
+theme_by_role,"Findability & navigation (discoverability, IA, onboarding)",Product Manager,3
+theme_by_role,"Findability & navigation (discoverability, IA, onboarding)",Ux Designer,1
+theme_by_role,"Findability & navigation (discoverability, IA, onboarding)",Ux Researcher,1
+theme_by_role,"Performance & responsiveness (slow UI, lag, loading, sync)",Ux Designer,1
+theme_by_role,"Performance & responsiveness (slow UI, lag, loading, sync)",Ux Researcher,3
+theme_by_role,Collaboration & multi-user friction,Ux Designer,2
+theme_by_role,Collaboration & multi-user friction,Ux Researcher,1
+theme_by_role,Documentation & clarity,(no role),1
+theme_by_role,Documentation & clarity,Content Strategist,1
+theme_by_role,"Mobile, density, and ergonomics",Product Manager,1
+theme_by_role,"Mobile, density, and ergonomics",Ux Designer,1
+theme_by_role,Notification & attention overload,Product Manager,1
+keyword_spotlight,slow,response_count,1
+keyword_spotlight,slow,Ux Researcher,1
+keyword_spotlight,broken,response_count,2
+keyword_spotlight,broken,Product Manager,1
+keyword_spotlight,broken,Ux Designer,1
+keyword_spotlight,love,response_count,1
+keyword_spotlight,love,Ux Researcher,1

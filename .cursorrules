@@ -29,8 +29,10 @@ hcde530/
 │   ├── clean_responses.py
 │   ├── count_roles.py
 │   ├── responses.csv
+│   ├── responses_cleaned.csv
 │   ├── role_counts.csv
 │   ├── week3_analysis_buggy.py
+│   ├── week3_analysis_output.csv
 │   └── week3_survey_messy.csv
 ├── .cursorrules
 ├── .gitignore
