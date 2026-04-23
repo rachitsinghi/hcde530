@@ -95,6 +95,7 @@ def _text_matches_trigger(text_lower: str, trigger: str) -> bool:
 
 
 def Thematic_result(rows: list[dict], keyword: str | None = None) -> dict:
+    # if the keyword is not None, return a dictionary with the mode, keyword, response count, and by role
     """Analyze open-ended survey text for thematic patterns.
 
     Uses ``response_text`` on each row. Theme labels and trigger phrases come from
@@ -138,6 +139,7 @@ def Thematic_result(rows: list[dict], keyword: str | None = None) -> dict:
     theme_by_role: dict[str, dict[str, int]] = {t: defaultdict(int) for t in THEME_TRIGGERS}
 
     for row in rows:
+        # if the response text is empty, skip the row
         text = _response_lower(row)
         role = _normalized_role(row)
         for theme, triggers in THEME_TRIGGERS.items():
@@ -149,6 +151,7 @@ def Thematic_result(rows: list[dict], keyword: str | None = None) -> dict:
     top_labels = sorted(t for t, c in theme_response_counts.items() if c == max_count)
     return {
         "mode": "themes",
+        # if the theme response counts is empty, skip the row
         "theme_response_counts": dict(
             sorted(theme_response_counts.items(), key=lambda x: (-x[1], x[0]))
         ),
@@ -170,6 +173,7 @@ def print_theme_report(result: dict) -> None:
         print(f"\nMost common theme (most responses mentioning it): {t0['label']}")
         print(f"  → {t0['response_count']} response(s)")
     else:
+        # if the top themes is not empty, print the label and response count
         labs = [t["label"] for t in tops]
         n = tops[0]["response_count"] if tops else 0
         print(f"\nMost common themes (tied at {n} response(s) each):")
