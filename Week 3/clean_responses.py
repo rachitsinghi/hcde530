@@ -20,6 +20,7 @@ def summarize_data(rows: list[dict]) -> str:
     unique = sorted(set(role_labels))
     roles_phrase = ", ".join(unique) if unique else "(none)"
     return (
+        # f-string to return a string with the number of rows, the number of distinct values in the role column, and the number of rows with an empty name field
         f"This dataset has {n} row(s). "
         f"There are {len(unique)} distinct value(s) in the role column: {roles_phrase}. "
         f"{empty_names} row(s) have an empty name field."
@@ -35,6 +36,7 @@ with open(INPUT_CSV, newline="", encoding="utf-8") as f:
 
     for row in reader:
         name = (row.get("name") or "").strip()
+        # if the name is empty, skip the row
         if not name:
             continue
         row = dict(row)
