@@ -8,8 +8,6 @@ from urllib.parse import urljoin
 
 import requests
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-# import the Counter class
-from collections import Counter
 
 API_ROOT = "https://hcde530-week4-api.onrender.com/"
 REVIEWS_URL = urljoin(API_ROOT, "reviews")
@@ -24,7 +22,7 @@ _analyzer: SentimentIntensityAnalyzer | None = None
 def get_analyzer() -> SentimentIntensityAnalyzer:
     global _analyzer
     if _analyzer is None:
-        _analyzer = SentimentIntensityAnalyzer()
+        _analyzer = SentimentIntensityAnalyzer()  # lazy init avoids reloading lexicon on every polarity() call
     return _analyzer
 
 
@@ -67,7 +65,7 @@ def fetch_all_reviews() -> list[dict]:
         out.extend(batch)
         total = int(payload.get("total") or 0)
         offset += len(batch)
-        if not batch or offset >= total:
+        if not batch or offset >= total:  # same termination rule as fetch_reviews pagination
             break
     return out
 
@@ -122,14 +120,14 @@ def main() -> None:
     if not numeric_ratings:
         raise SystemExit("No reviews with a numeric rating were returned.")
 
-    lowest = min(numeric_ratings)
+    lowest = min(numeric_ratings)  # smallest integer star rating present in this pull
     label = star_label(lowest)
-    worst = [r for r in reviews if r.get("rating") is not None and int(r["rating"]) == lowest]
+    worst = [r for r in reviews if r.get("rating") is not None and int(r["rating"]) == lowest]  # tie: all apps at that rating
 
     rows: list[dict[str, str | int]] = []
     for r in worst:
         rid = r.get("id")
-        reason = str(r.get("review", ""))
+        reason = str(r.get("review", ""))  # free-text body is what VADER scores
         p = polarity(reason)
         rows.append(
             {
@@ -156,9 +154,9 @@ def main() -> None:
         by_app[str(r.get("app", ""))].append(str(r.get("review", "")))
 
     summary_rows: list[dict[str, str | int]] = []
-    for app in sorted(by_app, key=str.lower):
+    for app in sorted(by_app, key=str.lower):  # deterministic row order for grading / diffs
         reasons = by_app[app]
-        polarities = [polarity(t) for t in reasons]
+        polarities = [polarity(t) for t in reasons]  # one VADER vector per review line for this app
         avg = mean_polarity(polarities)
         summary_rows.append(
             {
@@ -202,7 +200,7 @@ def main() -> None:
 
     print(f"Lowest rating in this dataset: {label}")
     print(f"Exported {len(rows)} review row(s) and {len(summary_rows)} sentiment summary row(s) to {OUTPUT_CSV}")
-    counts = Counter(str(r["app"]) for r in rows)
+    counts = Counter(str(r["app"]) for r in rows)  # quick histogram of how many worst reviews per app
     print(f"By app ({label}):")
     for app in sorted(counts, key=str.lower):
         print(f"  {app}: {counts[app]} review(s)")

@@ -19,8 +19,9 @@ OUTPUT_CSV = HERE / "reviews_category_helpful.csv"
 
 # fetch the json from the url
 def fetch_json(url: str) -> dict:
+    # Ask for JSON explicitly so misconfigured servers are less likely to return HTML.
     resp = requests.get(url, headers={"Accept": "application/json"}, timeout=60)
-    resp.raise_for_status()
+    resp.raise_for_status()  # surface 4xx/5xx instead of silently parsing error bodies
     return resp.json()
 
 
@@ -33,7 +34,7 @@ def main() -> None:
     print(f"Connected: {meta.get('name', 'API')}")
 
     rows: list[dict[str, str | int]] = []
-    offset = 0
+    offset = 0  # API uses limit/offset pagination across the full review set
 
     while True:
         page_url = f"{REVIEWS_URL}?limit={PAGE_LIMIT}&offset={offset}"
@@ -43,26 +44,26 @@ def main() -> None:
             raise SystemExit(f"Could not fetch reviews: {exc}") from exc
 
         reviews = payload.get("reviews") or []
-        total = int(payload.get("total") or 0)
+        total = int(payload.get("total") or 0)  # total across all pages (usually 500 for this API)
 
         for review in reviews:
             category = str(review.get("category", ""))
             votes = review.get("helpful_votes")
             if votes is None:
-                votes_int = 0
+                votes_int = 0  # treat missing helpful_votes as zero for CSV consistency
             else:
                 votes_int = int(votes)
             print(f"{category}: {votes_int} helpful vote(s)")
             rows.append({"category": category, "helpful_votes": votes_int})
 
         offset += len(reviews)
-        if not reviews or offset >= total:
+        if not reviews or offset >= total:  # stop when a page is empty or we have seen every row
             break
 
     with open(OUTPUT_CSV, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["category", "helpful_votes"])
         writer.writeheader()
-        writer.writerows(rows)
+        writer.writerows(rows)  # utf-8 keeps non-ASCII category text intact on disk
 
     print(f"Wrote {len(rows)} row(s) to {OUTPUT_CSV}")
 

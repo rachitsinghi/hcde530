@@ -68,19 +68,19 @@ def search_photos(query: str, per_page: int, key: str) -> list[dict]:
     resp = requests.get(
         PEXELS_SEARCH,
         params={"query": query, "per_page": per_page},
-        headers={"Authorization": key},
+        headers={"Authorization": key},  # Pexels expects the raw key in this header (not Bearer …)
         timeout=REQUEST_TIMEOUT,
     )
     resp.raise_for_status()
     data = resp.json()
-    return list(data.get("photos") or [])
+    return list(data.get("photos") or [])  # missing "photos" becomes [] instead of None errors downstream
 
 
 def pick_src(photo: dict) -> str:
     src = photo.get("src") or {}
     if not isinstance(src, dict):
         return ""
-    for k in ("large2x", "large", "medium", "original"):
+    for k in ("large2x", "large", "medium", "original"):  # walk down in quality preference order
         u = src.get(k)
         if isinstance(u, str) and u.startswith("http"):
             return u
@@ -91,7 +91,7 @@ def download(url: str, dest: Path) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
     r = requests.get(url, timeout=REQUEST_TIMEOUT)
     r.raise_for_status()
-    dest.write_bytes(r.content)
+    dest.write_bytes(r.content)  # binary write keeps JPEG/PNG bytes exact (no text decoding)
 
 
 def build_gallery_html(rows: list[dict]) -> str:
@@ -197,7 +197,7 @@ def main() -> None:
             if not isinstance(pid, int):
                 continue
             if pid in seen_ids:
-                continue
+                continue  # same photo can appear in overlapping search results
             seen_ids.add(pid)
 
             src_url = pick_src(photo)
@@ -224,7 +224,7 @@ def main() -> None:
 
             rows.append(
                 {
-                    "rel": f"{IMG_DIR.name}/{fname}",
+                    "rel": f"{IMG_DIR.name}/{fname}",  # relative path works when opening gallery via file://
                     "photo_url": photo_url,
                     "photographer": photographer,
                     "photographer_url": ph_url,

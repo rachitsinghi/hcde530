@@ -1124,12 +1124,14 @@ hcde530/
 │   ├── fetch_drug_images.py
 │   ├── fetch_lowest_ratings.py
 │   ├── fetch_reviews.py
+│   ├── pexels_api.ipynb
 │   ├── pexels_search_export.csv
 │   ├── pexels_shape_color_analysis.csv
 │   ├── pexels_shape_color_summary.md
 │   ├── requirements.txt
 │   ├── reviews_category_helpful.csv
-│   └── reviews_lowest_ratings.csv
+│   ├── reviews_lowest_ratings.csv
+│   └── week4.md
 ├── .cursorrules
 ├── .gitignore
 ├── PROJECT_CONTEXT.md

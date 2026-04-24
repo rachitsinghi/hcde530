@@ -72,3 +72,26 @@ colour_group,,,,Colour: Red,,,red,,id=3683093 file=pexels_3683093.jpg | id=31480
 colour_group,,,,Colour: Teal / cyan,,,teal,,id=9713006 file=pexels_9713006.jpg,1
 colour_group,,,,Colour: White,,,white,,id=360622 file=pexels_360622.jpg | id=3923155 file=pexels_3923155.jpg | id=9742878 file=pexels_9742878.jpg | id=19471015 file=pexels_19471015.jpg,4
 colour_group,,,,Colour: Yellow,,,yellow,,id=9742878 file=pexels_9742878.jpg | id=17553953 file=pexels_17553953.jpg | id=17604768 file=pexels_17604768.jpg | id=29555835 file=pexels_29555835.jpg | id=36845279 file=pexels_36845279.jpg,5
+
+COUNT_SUMMARY,domain,category_code,category_title,image_count_in_category,,,,,Same image can appear in multiple shape/colour groups; column sums are > 50.
+count_row,shape,blister_foil_pack,Shape: Blister or foil pack,7,,,,,
+count_row,shape,bottle_or_tub_container,Shape: Bottle or container,4,,,,,
+count_row,shape,heart_shaped_pill_layout,Shape: Heart-shaped arrangement,1,,,,,
+count_row,shape,loose_roundish_pills_generic,Shape: Pills or tablets (general),16,,,,,
+count_row,shape,loose_scattered_pills,Shape: Loose or scattered pills,6,,,,,
+count_row,shape,mixed_multi_shape_pills,Shape: Mixed shapes or many colours,8,,,,,
+count_row,shape,no_clear_pill_or_blister_subject,Shape: No clear pill close-up,24,,,,,
+count_row,shape,oval_or_capsule,Shape: Oval or capsule,6,,,,,
+count_row,shape,round_flat_tablets,Shape: Round flat tablets,1,,,,,
+count_row,shape,unspecified_pill_shape,"Shape: Pill subject, shape unspecified",6,,,,,
+count_row,colour,black,Colour: Black,3,,,,,
+count_row,colour,blue,Colour: Blue,5,,,,,
+count_row,colour,gray,Colour: Gray,20,,,,,
+count_row,colour,green,Colour: Green,2,,,,,
+count_row,colour,multicolor,Colour: Multicolour,8,,,,,
+count_row,colour,orange,Colour: Orange,14,,,,,
+count_row,colour,red,Colour: Red,2,,,,,
+count_row,colour,teal,Colour: Teal / cyan,1,,,,,
+count_row,colour,white,Colour: White,4,,,,,
+count_row,colour,yellow,Colour: Yellow,5,,,,,
+count_totals,,distinct_shape_categories=10,distinct_colour_categories=10,source_images=50,,,,,
