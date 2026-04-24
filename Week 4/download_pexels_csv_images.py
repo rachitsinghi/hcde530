@@ -24,6 +24,7 @@ SLEEP_SEC = 0.2
 
 def suffix_from_url(url: str) -> str:
     u = url.lower()
+    # Strip query string so ?auto=compress does not hide a .png in the path segment
     if ".png" in u.split("?", 1)[0]:
         return ".png"
     if ".webp" in u.split("?", 1)[0]:
@@ -33,9 +34,9 @@ def suffix_from_url(url: str) -> str:
 
 def download(url: str, dest: Path) -> None:
     dest.parent.mkdir(parents=True, exist_ok=True)
-    r = requests.get(url, timeout=REQUEST_TIMEOUT)
+    r = requests.get(url, timeout=REQUEST_TIMEOUT)  # CDN fetch; no Pexels API key required for images.pexels.com
     r.raise_for_status()
-    dest.write_bytes(r.content)
+    dest.write_bytes(r.content)  # store raw bytes; encoding is irrelevant for binary JPEG/PNG
 
 
 def safe_id(raw: str) -> str | None:
@@ -61,7 +62,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    csv_path = args.csv if args.csv.is_absolute() else HERE / args.csv
+    csv_path = args.csv if args.csv.is_absolute() else HERE / args.csv  # resolve relative paths next to script
     out_dir = args.out_dir if args.out_dir.is_absolute() else HERE / args.out_dir
 
     if not csv_path.is_file():
@@ -75,12 +76,12 @@ def main() -> None:
             raise SystemExit("CSV must have an image_large_url column.")
         for row in reader:
             url = (row.get("image_large_url") or "").strip()
-            pid = safe_id(str(row.get("id", "")))
+            pid = safe_id(str(row.get("id", "")))  # only accept numeric Pexels photo ids for filenames
             if not url or not pid:
                 skipped += 1
                 continue
             suffix = suffix_from_url(url)
-            dest = out_dir / f"pexels_{pid}{suffix}"
+            dest = out_dir / f"pexels_{pid}{suffix}"  # stable name so re-running overwrites the same file
             try:
                 download(url, dest)
             except requests.RequestException as exc:
@@ -89,7 +90,7 @@ def main() -> None:
                 continue
             ok += 1
             print(dest.name)
-            time.sleep(SLEEP_SEC)
+            time.sleep(SLEEP_SEC)  # small pause to avoid hammering the image CDN
 
     print(f"Done. Saved {ok} file(s) under {out_dir} ({skipped} skipped).")
 

@@ -27,7 +27,7 @@ SLEEP_SEC = 0.35
 def load_env(path: Path) -> None:
     if not path.is_file():
         return
-    raw = path.read_text(encoding="utf-8-sig").strip()
+    raw = path.read_text(encoding="utf-8-sig").strip()  # utf-8-sig tolerates a leading BOM from some editors
     if not raw:
         return
     first = raw.splitlines()[0].strip()
@@ -37,11 +37,11 @@ def load_env(path: Path) -> None:
     for line in raw.splitlines():
         line = line.strip()
         if not line or line.startswith("#") or "=" not in line:
-            continue
+            continue  # skip blanks, comments, and malformed lines
         k, _, v = line.partition("=")
-        k, v = k.strip(), v.strip().strip('"').strip("'")
+        k, v = k.strip(), v.strip().strip('"').strip("'")  # allow optional quotes around values
         if k:
-            os.environ[k] = v
+            os.environ[k] = v  # .env wins over empty shell vars (assignment, not setdefault)
 
 
 def pexels_api_key() -> str | None:
@@ -52,7 +52,7 @@ def pexels_api_key() -> str | None:
 def flatten_photo(photo: dict[str, Any], *, search_query: str, api_page: int) -> dict[str, Any]:
     src = photo.get("src") if isinstance(photo.get("src"), dict) else {}
     assert isinstance(src, dict)
-    large = src.get("large2x") or src.get("large") or src.get("medium") or ""
+    large = src.get("large2x") or src.get("large") or src.get("medium") or ""  # prefer larger assets when present
     row: dict[str, Any] = {
         "id": photo.get("id", ""),
         "width": photo.get("width", ""),
@@ -112,7 +112,7 @@ def main() -> None:
         help="Results per API request, max 80 (default: 40).",
     )
     args = parser.parse_args()
-    per_page = max(1, min(80, args.per_page))
+    per_page = max(1, min(80, args.per_page))  # Pexels caps per_page at 80 on the search endpoint
 
     key = pexels_api_key()
     if not key:
@@ -165,7 +165,7 @@ def main() -> None:
                 continue
             pid = photo.get("id")
             if not isinstance(pid, int) or pid in seen:
-                continue
+                continue  # skip bad payloads and duplicates when the same photo appears on later pages
             seen.add(pid)
             rows.append(
                 flatten_photo(photo, search_query=args.query, api_page=api_page)
@@ -194,7 +194,7 @@ def main() -> None:
     with open(out_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=FIELDNAMES, extrasaction="ignore")
         writer.writeheader()
-        writer.writerows(rows[: args.min_rows])
+        writer.writerows(rows[: args.min_rows])  # trim if we overshot the requested row count
 
     written = min(len(rows), args.min_rows)
     print(f"Wrote {written} row(s) to {out_path}")

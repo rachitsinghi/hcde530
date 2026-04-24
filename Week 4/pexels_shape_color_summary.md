@@ -338,3 +338,43 @@ Yellow or golden pills or capsules.
 - **`pexels_17604768.jpg`** — Pexels photo ID **17604768** — _Bright yellow pills scattered on a vibrant blue background, resembling a healthcare theme._
 - **`pexels_29555835.jpg`** — Pexels photo ID **29555835** — _Intricate 18th-century pharmaceutical jars and bust at German Pharmacy Museum, Heidelberg._
 - **`pexels_36845279.jpg`** — Pexels photo ID **36845279** — _Street scene of a neon-lit pharmacy sign in Bucharest, Romania at night._
+
+---
+
+## Part 3 — How many images per category (counts)
+
+Each image can sit in **more than one** category, so the shape counts (and colour counts) **add up to more than 50**.
+
+### Shape categories
+
+| Category (code) | Images in that shape group |
+| --- | ---: |
+| `blister_foil_pack` | 7 |
+| `bottle_or_tub_container` | 4 |
+| `heart_shaped_pill_layout` | 1 |
+| `loose_roundish_pills_generic` | 16 |
+| `loose_scattered_pills` | 6 |
+| `mixed_multi_shape_pills` | 8 |
+| `no_clear_pill_or_blister_subject` | 24 |
+| `oval_or_capsule` | 6 |
+| `round_flat_tablets` | 1 |
+| `unspecified_pill_shape` | 6 |
+
+**Distinct shape categories:** 10
+
+### Colour categories
+
+| Category (code) | Images in that colour group |
+| --- | ---: |
+| `black` | 3 |
+| `blue` | 5 |
+| `gray` | 20 |
+| `green` | 2 |
+| `multicolor` | 8 |
+| `orange` | 14 |
+| `red` | 2 |
+| `teal` | 1 |
+| `white` | 4 |
+| `yellow` | 5 |
+
+**Distinct colour categories:** 10

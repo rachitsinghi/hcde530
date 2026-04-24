@@ -157,7 +157,7 @@ SKIP_COLOR_CONTEXT = re.compile(
 def hex_to_rgb(hex_s: str) -> tuple[int, int, int] | None:
     s = (hex_s or "").strip().lstrip("#")
     if len(s) != 6 or not re.fullmatch(r"[0-9a-fA-F]{6}", s):
-        return None
+        return None  # ignore malformed avg_color strings from the CSV
     return int(s[0:2], 16), int(s[2:4], 16), int(s[4:6], 16)
 
 
@@ -225,7 +225,7 @@ def pill_relevant_clauses(alt: str) -> list[str]:
     raw = (alt or "").strip()
     if not raw:
         return []
-    chunks = re.split(r"(?<=[.!?])\s+|(?<=;)\s*", raw)
+    chunks = re.split(r"(?<=[.!?])\s+|(?<=;)\s*", raw)  # split caption into clauses before background stripping
     out: list[str] = []
     for ch in chunks:
         ch = ch.strip()
@@ -318,7 +318,7 @@ def dominant_pill_colors_from_image(ctr: Counter[str], min_frac: float = 0.16, m
             break
     chrom = [x for x in out if x not in ("white", "gray", "black")]
     if len(chrom) >= 2:
-        out.append("multicolor")
+        out.append("multicolor")  # flag scenes with multiple strong hues, not just neutrals
     return sorted(set(out))
 
 
@@ -330,7 +330,7 @@ def infer_pill_colors(
     clauses = pill_relevant_clauses(alt)
     from_alt = extract_pill_colors_from_clauses(clauses)
     if from_alt:
-        return from_alt, "alt_text"
+        return from_alt, "alt_text"  # caption-derived colours beat pixels when both exist
 
     if not has_pill_subject(alt):
         hx = hex_to_rgb(avg_hex)
@@ -364,7 +364,7 @@ def infer_pill_shapes(alt: str) -> tuple[list[str], str]:
 
 
 def find_image_path(img_dir: Path, pid: str) -> Path | None:
-    for ext in (".jpg", ".jpeg", ".png", ".webp"):
+    for ext in (".jpg", ".jpeg", ".png", ".webp"):  # download script may save .jpg even when CDN says .jpeg
         p = img_dir / f"pexels_{pid}{ext}"
         if p.is_file():
             return p
@@ -392,7 +392,7 @@ def main() -> None:
         for row in reader:
             pid = str(row.get("id", "")).strip()
             if not pid.isdigit():
-                continue
+                continue  # skip blank lines or footer rows from a dirty export
             alt = row.get("alt") or ""
             avg = row.get("avg_color") or ""
 
@@ -519,6 +519,70 @@ def main() -> None:
             }
             w2.writerow([row.get(h, "") for h in fieldnames])
 
+        w2.writerow([])
+        w2.writerow(
+            [
+                "COUNT_SUMMARY",
+                "domain",
+                "category_code",
+                "category_title",
+                "image_count_in_category",
+                "",
+                "",
+                "",
+                "",
+                "Same image can appear in multiple shape/colour groups; column sums are > 50.",
+            ]
+        )
+        for tag in sorted(by_shape.keys()):
+            ids = sorted(set(by_shape[tag]), key=int)
+            title = SHAPE_SECTION.get(tag, (tag.replace("_", " ").title(), ""))[0]
+            w2.writerow(
+                [
+                    "count_row",
+                    "shape",
+                    tag,
+                    f"Shape: {title}",
+                    str(len(ids)),
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                ]
+            )
+        for tag in sorted(by_color.keys()):
+            ids = sorted(set(by_color[tag]), key=int)
+            title = COLOUR_SECTION.get(tag, (tag.replace("_", " ").title(), ""))[0]
+            w2.writerow(
+                [
+                    "count_row",
+                    "colour",
+                    tag,
+                    f"Colour: {title}",
+                    str(len(ids)),
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                ]
+            )
+        w2.writerow(
+            [
+                "count_totals",
+                "",
+                f"distinct_shape_categories={len(by_shape)}",
+                f"distinct_colour_categories={len(by_color)}",
+                f"source_images={len(rows_out)}",
+                "",
+                "",
+                "",
+                "",
+                "",
+            ]
+        )
+
     def image_bullets(ids: list[str]) -> list[str]:
         bullets: list[str] = []
         for pid in ids:
@@ -589,9 +653,51 @@ def main() -> None:
         lines.extend(image_bullets(ids))
         lines.append("")
 
+    lines.extend(
+        [
+            "---",
+            "",
+            "## Part 3 — How many images per category (counts)",
+            "",
+            "Each image can sit in **more than one** category, so the shape counts (and colour counts) **add up to more than 50**.",
+            "",
+            "### Shape categories",
+            "",
+            "| Category (code) | Images in that shape group |",
+            "| --- | ---: |",
+        ]
+    )
+    for tag in sorted(by_shape.keys()):
+        n = len(set(by_shape[tag]))
+        lines.append(f"| `{tag}` | {n} |")
+    lines.extend(
+        [
+            "",
+            f"**Distinct shape categories:** {len(by_shape)}",
+            "",
+            "### Colour categories",
+            "",
+            "| Category (code) | Images in that colour group |",
+            "| --- | ---: |",
+        ]
+    )
+    for tag in sorted(by_color.keys()):
+        n = len(set(by_color[tag]))
+        lines.append(f"| `{tag}` | {n} |")
+    lines.extend(
+        [
+            "",
+            f"**Distinct colour categories:** {len(by_color)}",
+            "",
+        ]
+    )
+
     OUT_MD.write_text("\n".join(lines), encoding="utf-8")
-    n_extra = 1 + len(by_shape) + 1 + len(by_color)  # section + shapes + blank + colours
-    print(f"Wrote {OUT_CSV} ({len(rows_out)} image rows + {n_extra} category index rows)")
+    n_index = 1 + len(by_shape) + 1 + len(by_color)
+    n_counts = 2 + len(by_shape) + len(by_color) + 1  # blank + header + rows + totals
+    print(
+        f"Wrote {OUT_CSV} ({len(rows_out)} image rows + {n_index} index rows + {n_counts} count-summary rows)"
+    )
     print(f"Wrote {OUT_MD}")
 
 
