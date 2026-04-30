@@ -1,0 +1,21 @@
+review_id,app_id,rating,review_text
+1,FLD,5,Remote fieldwork tracking finally works. Battery life is excellent.
+2,FLD,2,GPS accuracy drops in dense urban areas. Not usable on my last project.
+3,FLD,4,Offline sync is solid. Would like better export options.
+4,FLD,3,Good concept but the UI needs work. Too many taps to log an observation.
+5,LBK,5,The highlight reel feature saved hours of analysis time.
+6,LBK,4,Participant recruiting add-on is overpriced but the core product is strong.
+7,LBK,1,Recording failed mid-session. Lost 40 minutes of an interview.
+8,LBK,3,Works well but video quality degrades on slow connections.
+9,DVT,5,Best research repository I have used. Tagging is fast and smart.
+10,DVT,4,Import from Notion is seamless. Search could be faster on large projects.
+11,DVT,5,The insight clustering feature changed how our team synthesizes.
+12,DVT,2,Pricing jumped 60% at renewal. Looking for alternatives.
+13,MZE,4,Unmoderated testing at scale is genuinely easy. Results come in fast.
+14,MZE,3,Prototype fidelity matters a lot here. Low-fi tests produce noisy data.
+15,MZE,5,Figma integration is seamless. Task completion metrics are clear.
+16,MZE,2,Participant panel is limited outside the US. International studies are hard.
+17,MRO,5,Infinite canvas with real-time collaboration. Works across every team I have.
+18,MRO,4,Templates are excellent. Performance slows on very large boards.
+19,MRO,3,Feature-heavy. New users need onboarding or they get lost.
+20,MRO,5,Workshop facilitation with remote teams is now actually enjoyable.

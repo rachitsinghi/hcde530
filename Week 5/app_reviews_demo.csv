@@ -1,0 +1,501 @@
+id,app,category,rating,review,date,helpful_votes,verified_purchase,device_type,app_version
+1,Fieldkit,field research,1,Auto-transcription accuracy on accented speakers is inconsistent. Guest seats should be free — charging for view-only access feels wrong.,2023-03-31,37,True,mobile,2.5.0
+2,Fieldkit,field research,2,Search results are slow when the repository is large.,2024-07-28,12,True,mobile,2.5.3
+3,Lookback,user research,4,One-click export to Notion is a feature I use every week. Being able to rewatch sessions at 1.5x speed has saved me hours.,2024-03-08,21,True,desktop,5.2.0
+4,Dovetail,research repository,5,My whole team can comment on the same session without chaos. Recording quality is excellent even on slow connections.,2023-12-19,38,True,,2.0.0
+5,Fieldkit,field research,5,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-01-23,5,True,desktop,2.5.3
+6,Lookback,user research,5,The guest access feature is perfect for external stakeholders. The session recording is crisp and easy to scrub through.,2024-11-08,14,False,,5.3.1
+7,Fieldkit,field research,5,Project folders keep multi-phase studies manageable. PDF reports look professional enough to share with executives.,2023-06-16,23,True,mobile,3.0.0
+8,Maze,usability testing,5,I was running my first study within 20 minutes of signing up.,2023-06-25,34,False,,4.1.0
+9,Dovetail,research repository,4,The guest access feature is perfect for external stakeholders. CSV export includes everything I need for further analysis.,2023-08-23,2,False,desktop,2.0.0
+10,Miro,collaborative whiteboard,3,"Works fine — nothing remarkable, nothing broken.",2024-08-03,45,True,,9.4.0
+11,Miro,collaborative whiteboard,4,Screener templates saved me from writing survey questions from scratch. I can tag clips without leaving the playback view.,2024-07-28,34,True,desktop,9.3.0
+12,Lookback,user research,4,Battery drain is reasonable even during long observation sessions. Searching by tag across projects actually works reliably.,2024-05-20,5,False,tablet,5.3.1
+13,Fieldkit,field research,3,Solid core product with rough edges in the advanced workflows.,2024-11-27,27,True,desktop,
+14,Miro,collaborative whiteboard,4,One-click export to Notion is a feature I use every week. I was running my first study within 20 minutes of signing up.,2024-11-27,46,True,mobile,9.4.0
+15,Lookback,user research,5,The timeline view across a research program is genuinely useful. The highlight reel feature is genuinely useful for presentations.,2024-04-09,0,False,mobile,
+16,Maze,usability testing,5,Custom fields on participants let me filter by screener criteria.,2023-04-19,40,True,mobile,4.2.3
+17,Lookback,user research,5,Bulk-tagging across sessions is a huge time saver.,2024-07-06,33,False,mobile,5.2.0
+18,Lookback,user research,4,The session recording is crisp and easy to scrub through.,2023-11-11,15,True,mobile,5.3.1
+19,Lookback,user research,5,Automatic session indexing makes it easy to find key moments.,2024-06-29,8,True,,5.3.1
+20,Miro,collaborative whiteboard,5,Bulk-tagging across sessions is a huge time saver.,2024-09-13,27,False,mobile,9.4.0
+21,Lookback,user research,5,The onboarding checklist is paced well — not overwhelming.,2024-02-13,42,True,desktop,5.1.2
+22,Miro,collaborative whiteboard,5,CSV export includes everything I need for further analysis. Recording quality is excellent even on slow connections.,2023-01-22,37,True,mobile,9.3.0
+23,Lookback,user research,3,Good for solo researchers but team features need more polish.,2024-10-08,3,True,desktop,5.2.0
+24,Fieldkit,field research,5,Session recordings sync instantly — no waiting around. Smart folders auto-populate based on tags — surprisingly powerful.,2023-08-08,34,True,,
+25,Lookback,user research,5,Tag hierarchies let me keep themes organized across a whole study.,2023-07-14,6,True,mobile,5.1.2
+26,Miro,collaborative whiteboard,4,Video clips export cleanly with timecodes intact.,2023-02-25,43,True,desktop,9.4.0
+27,Fieldkit,field research,2,No built-in way to generate a structured debrief template from tags. Search results are slow when the repository is large.,2024-04-04,8,True,mobile,2.5.0
+28,Maze,usability testing,4,Project folders keep multi-phase studies manageable.,2024-07-17,6,True,desktop,
+29,Lookback,user research,5,Being able to rewatch sessions at 1.5x speed has saved me hours. Battery drain is reasonable even during long observation sessions.,2023-08-07,25,False,,5.2.0
+30,Dovetail,research repository,4,PDF reports look professional enough to share with executives.,2024-04-10,18,True,mobile,2.1.2
+31,Lookback,user research,5,The highlight reel feature is genuinely useful for presentations. The tagging workflow is intuitive once you get used to it.,2024-08-16,47,True,mobile,5.2.0
+32,Maze,usability testing,1,Session sharing links occasionally expire before participants click them.,2024-06-27,10,True,tablet,4.2.3
+33,Lookback,user research,2,Loading large projects takes noticeably longer than it used to.,2024-11-22,15,True,desktop,5.2.0
+34,Lookback,user research,3,"Gets the job done, but the workflow has too many clicks for routine tasks.",2023-02-10,39,True,mobile,5.2.0
+35,Lookback,user research,4,Permissions are granular enough that clients can view but not edit. The timeline view across a research program is genuinely useful.,2023-09-02,16,True,mobile,5.1.2
+36,Maze,usability testing,4,Project folders keep multi-phase studies manageable. The voice memo feature captures context I'd otherwise lose.,2023-04-13,4,True,desktop,4.0.1
+37,Lookback,user research,3,I've used it for two years. It's reliable but not exciting.,2023-03-12,15,True,desktop,5.2.0
+38,Dovetail,research repository,4,GPS tagging for field observations is exactly what I needed.,2024-10-31,33,True,,1.8.4
+39,Lookback,user research,4,I was running my first study within 20 minutes of signing up.,2023-05-18,16,True,desktop,5.1.2
+40,Fieldkit,field research,5,Bulk-tagging across sessions is a huge time saver. Permissions are granular enough that clients can view but not edit.,2023-07-28,43,True,mobile,2.4.1
+41,Maze,usability testing,4,My whole team can comment on the same session without chaos. GPS tagging for field observations is exactly what I needed.,2023-02-15,0,True,mobile,4.2.3
+42,Dovetail,research repository,5,Sharing clips with stakeholders takes about 30 seconds.,2024-07-18,45,True,desktop,1.8.4
+43,Fieldkit,field research,2,Search results are slow when the repository is large. Keyboard shortcuts aren't discoverable — I found them by accident.,2024-07-19,9,True,mobile,
+44,Fieldkit,field research,4,Project folders keep multi-phase studies manageable.,2023-08-04,43,True,mobile,2.5.3
+45,Fieldkit,field research,4,Battery drain is reasonable even during long observation sessions.,2023-06-08,15,False,mobile,3.0.0
+46,Dovetail,research repository,5,Being able to rewatch sessions at 1.5x speed has saved me hours.,2023-12-07,26,False,tablet,
+47,Dovetail,research repository,3,Setup was smooth; ongoing use has revealed some rough edges.,2023-04-21,24,False,mobile,1.9.0
+48,Miro,collaborative whiteboard,3,Good enough for most projects but I always end up exporting to a spreadsheet anyway.,2023-12-25,19,False,desktop,
+49,Dovetail,research repository,3,"Strong on data collection, weaker on synthesis.",2023-07-17,25,True,mobile,
+50,Fieldkit,field research,5,Permissions are granular enough that clients can view but not edit.,2024-02-14,43,False,tablet,2.5.0
+51,Lookback,user research,4,The session recording is crisp and easy to scrub through.,2023-09-25,11,True,desktop,5.3.1
+52,Maze,usability testing,1,Session sharing links occasionally expire before participants click them. No dark mode — surprising for a tool used in low-light observation settings.,2024-09-12,32,True,mobile,
+53,Lookback,user research,3,"Does what it says, though the interface feels dated.",2024-03-22,0,True,,5.2.0
+54,Lookback,user research,5,The onboarding checklist is paced well — not overwhelming. Recording quality is excellent even on slow connections.,2024-09-30,20,True,desktop,5.3.1
+55,Fieldkit,field research,5,The guest access feature is perfect for external stakeholders. GPS tagging for field observations is exactly what I needed.,2024-02-17,44,True,desktop,
+56,Dovetail,research repository,3,"Strong on data collection, weaker on synthesis.",2024-01-24,43,False,desktop,2.0.0
+57,Dovetail,research repository,5,Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-01-01,19,True,mobile,1.9.0
+58,Miro,collaborative whiteboard,5,GPS tagging for field observations is exactly what I needed.,2024-03-28,43,True,mobile,
+59,Miro,collaborative whiteboard,5,Custom fields on participants let me filter by screener criteria.,2023-10-18,32,True,mobile,9.3.0
+60,Lookback,user research,4,Custom fields on participants let me filter by screener criteria.,2023-08-19,12,True,mobile,5.2.0
+61,Fieldkit,field research,3,Good enough for most projects but I always end up exporting to a spreadsheet anyway.,2024-09-17,4,True,mobile,3.0.0
+62,Lookback,user research,3,Setup was smooth; ongoing use has revealed some rough edges.,2024-01-29,31,True,tablet,5.1.2
+63,Dovetail,research repository,5,The session recording is crisp and easy to scrub through.,2023-08-13,11,False,tablet,2.1.2
+64,Lookback,user research,4,The mobile app doesn't crash when I switch between apps mid-session.,2023-05-05,29,True,tablet,
+65,Miro,collaborative whiteboard,5,The voice memo feature captures context I'd otherwise lose. One-click export to Notion is a feature I use every week.,2024-05-31,27,False,desktop,9.3.0
+66,Lookback,user research,4,Tag hierarchies let me keep themes organized across a whole study.,2023-09-11,40,True,mobile,5.3.1
+67,Lookback,user research,4,Bulk-tagging across sessions is a huge time saver.,2023-10-20,15,True,mobile,5.3.1
+68,Maze,usability testing,5,Being able to rewatch sessions at 1.5x speed has saved me hours. The mobile app doesn't crash when I switch between apps mid-session.,2023-08-08,4,True,desktop,4.0.1
+69,Maze,usability testing,4,CSV export includes everything I need for further analysis. Battery drain is reasonable even during long observation sessions.,2024-08-21,44,True,desktop,4.2.3
+70,Lookback,user research,4,Recording quality is excellent even on slow connections. Battery drain is reasonable even during long observation sessions.,2024-07-05,47,False,mobile,5.1.2
+71,Lookback,user research,5,The highlight reel feature is genuinely useful for presentations. Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-02-03,21,True,tablet,5.3.1
+72,Miro,collaborative whiteboard,5,Smart folders auto-populate based on tags — surprisingly powerful.,2024-09-29,34,True,,9.3.0
+73,Miro,collaborative whiteboard,5,I was running my first study within 20 minutes of signing up. The highlight reel feature is genuinely useful for presentations.,2024-04-17,11,True,desktop,9.2.1
+74,Miro,collaborative whiteboard,4,PDF reports look professional enough to share with executives. GPS tagging for field observations is exactly what I needed.,2024-03-07,16,False,desktop,9.3.0
+75,Miro,collaborative whiteboard,1,I've lost tags twice after a session due to a sync issue.,2023-12-25,14,True,desktop,
+76,Fieldkit,field research,5,I can tag clips without leaving the playback view.,2024-09-28,9,True,desktop,
+77,Miro,collaborative whiteboard,5,The mobile app doesn't crash when I switch between apps mid-session.,2023-09-20,23,True,desktop,9.2.1
+78,Lookback,user research,5,I was running my first study within 20 minutes of signing up.,2023-06-17,19,True,mobile,5.3.1
+79,Fieldkit,field research,5,Battery drain is reasonable even during long observation sessions. Custom fields on participants let me filter by screener criteria.,2023-03-19,37,True,mobile,2.5.3
+80,Dovetail,research repository,2,The Figma integration is read-only; I can't push annotations back.,2024-08-02,2,True,desktop,1.8.4
+81,Miro,collaborative whiteboard,5,Session recordings sync instantly — no waiting around.,2023-01-13,26,False,desktop,9.2.1
+82,Fieldkit,field research,4,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-03-21,11,False,mobile,
+83,Maze,usability testing,5,Battery drain is reasonable even during long observation sessions.,2024-08-29,17,True,,4.2.3
+84,Dovetail,research repository,5,Recording quality is excellent even on slow connections.,2023-09-07,29,True,mobile,1.9.0
+85,Miro,collaborative whiteboard,4,PDF reports look professional enough to share with executives. Bulk-tagging across sessions is a huge time saver.,2023-09-22,21,True,mobile,
+86,Lookback,user research,5,The guest access feature is perfect for external stakeholders. The tagging workflow is intuitive once you get used to it.,2023-09-05,46,True,mobile,5.2.0
+87,Lookback,user research,5,Screener templates saved me from writing survey questions from scratch.,2024-05-17,28,False,,5.2.0
+88,Fieldkit,field research,4,The highlight reel feature is genuinely useful for presentations. Template library covers most of my research formats out of the box.,2024-04-29,35,True,mobile,2.5.3
+89,Miro,collaborative whiteboard,5,GPS tagging for field observations is exactly what I needed. PDF reports look professional enough to share with executives.,2023-11-10,16,True,desktop,9.4.0
+90,Dovetail,research repository,4,The help docs are actually written by people who do research.,2023-07-09,12,True,mobile,2.0.0
+91,Miro,collaborative whiteboard,4,The voice memo feature captures context I'd otherwise lose.,2023-04-13,12,True,desktop,9.3.0
+92,Maze,usability testing,3,"Does what it says, though the interface feels dated.",2024-06-30,8,True,desktop,4.1.0
+93,Fieldkit,field research,4,The onboarding checklist is paced well — not overwhelming.,2024-05-17,6,False,tablet,2.5.0
+94,Lookback,user research,4,Video clips export cleanly with timecodes intact. Recording quality is excellent even on slow connections.,2024-05-04,7,False,desktop,5.1.2
+95,Miro,collaborative whiteboard,4,Works offline and syncs when I get back to WiFi — essential for fieldwork. Template library covers most of my research formats out of the box.,2023-03-29,15,True,desktop,9.4.0
+96,Miro,collaborative whiteboard,5,Being able to link observations to specific interview questions is great. Battery drain is reasonable even during long observation sessions.,2024-04-06,28,True,mobile,9.3.0
+97,Lookback,user research,5,The guest access feature is perfect for external stakeholders.,2024-09-16,47,True,desktop,
+98,Dovetail,research repository,5,My whole team can comment on the same session without chaos. Searching by tag across projects actually works reliably.,2023-03-18,10,True,tablet,2.0.0
+99,Miro,collaborative whiteboard,5,PDF reports look professional enough to share with executives. Permissions are granular enough that clients can view but not edit.,2024-04-09,4,True,tablet,9.4.0
+100,Maze,usability testing,5,The help docs are actually written by people who do research.,2023-07-22,27,True,,4.2.3
+101,Dovetail,research repository,5,Sharing clips with stakeholders takes about 30 seconds. Bulk-tagging across sessions is a huge time saver.,2024-09-01,47,False,mobile,2.1.2
+102,Maze,usability testing,4,PDF reports look professional enough to share with executives.,2023-10-06,32,True,,4.1.0
+103,Miro,collaborative whiteboard,2,Storage limits hit quickly when you're recording long sessions.,2024-09-10,16,True,desktop,
+104,Dovetail,research repository,5,Being able to link observations to specific interview questions is great.,2023-01-22,43,False,mobile,
+105,Lookback,user research,1,Video processing sometimes takes longer than the session itself.,2024-03-28,17,True,mobile,
+106,Lookback,user research,4,Smart folders auto-populate based on tags — surprisingly powerful.,2024-04-26,22,True,mobile,5.3.1
+107,Maze,usability testing,5,Custom fields on participants let me filter by screener criteria. Screener templates saved me from writing survey questions from scratch.,2023-10-23,42,False,mobile,4.2.3
+108,Lookback,user research,1,No way to pay monthly — annual commitment only is a dealbreaker for some. Video processing sometimes takes longer than the session itself.,2024-06-10,0,True,mobile,
+109,Lookback,user research,4,Being able to rewatch sessions at 1.5x speed has saved me hours.,2024-09-29,31,True,mobile,
+110,Fieldkit,field research,3,Reasonable feature set — the UX of the tool itself could use some research.,2023-05-15,18,True,desktop,2.5.3
+111,Miro,collaborative whiteboard,2,The browser extension stops recording silently sometimes.,2023-11-15,35,True,desktop,9.1.0
+112,Miro,collaborative whiteboard,2,Storage limits hit quickly when you're recording long sessions.,2024-10-25,9,True,mobile,
+113,Maze,usability testing,4,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-04-28,15,True,tablet,4.1.0
+114,Dovetail,research repository,4,The voice memo feature captures context I'd otherwise lose.,2023-05-20,4,True,mobile,1.8.4
+115,Miro,collaborative whiteboard,4,Being able to link observations to specific interview questions is great. Recording quality is excellent even on slow connections.,2023-11-02,37,True,mobile,
+116,Miro,collaborative whiteboard,5,One-click export to Notion is a feature I use every week.,2023-12-07,35,False,tablet,9.2.1
+117,Miro,collaborative whiteboard,4,Sharing clips with stakeholders takes about 30 seconds.,2023-09-02,36,True,mobile,9.3.0
+118,Miro,collaborative whiteboard,1,"The difference between clips, highlights, and moments isn't obvious at first.",2024-11-10,41,False,desktop,9.4.0
+119,Miro,collaborative whiteboard,5,Searching by tag across projects actually works reliably.,2023-12-06,6,False,,9.2.1
+120,Miro,collaborative whiteboard,2,The tag hierarchy system takes a few sessions to really click.,2024-02-24,41,False,mobile,9.1.0
+121,Fieldkit,field research,4,Permissions are granular enough that clients can view but not edit.,2024-02-12,41,True,mobile,3.0.0
+122,Maze,usability testing,5,Being able to link observations to specific interview questions is great. Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-07-08,2,True,mobile,4.1.0
+123,Dovetail,research repository,5,Sharing clips with stakeholders takes about 30 seconds.,2024-03-20,6,False,mobile,
+124,Fieldkit,field research,4,Template library covers most of my research formats out of the box.,2023-02-17,20,False,mobile,3.0.0
+125,Maze,usability testing,4,The highlight reel feature is genuinely useful for presentations. The voice memo feature captures context I'd otherwise lose.,2024-11-29,11,True,mobile,4.0.1
+126,Fieldkit,field research,5,One-click export to Notion is a feature I use every week.,2024-05-24,37,True,desktop,2.4.1
+127,Miro,collaborative whiteboard,5,PDF reports look professional enough to share with executives.,2024-04-21,18,True,,9.3.0
+128,Dovetail,research repository,2,The Figma integration is read-only; I can't push annotations back. Undo doesn't work in the affinity diagram view — a real problem.,2024-04-12,19,True,desktop,2.0.0
+129,Miro,collaborative whiteboard,5,Being able to rewatch sessions at 1.5x speed has saved me hours. One-click export to Notion is a feature I use every week.,2023-10-30,44,True,mobile,
+130,Miro,collaborative whiteboard,4,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-05-23,18,False,mobile,9.1.0
+131,Dovetail,research repository,5,Sharing clips with stakeholders takes about 30 seconds.,2024-09-27,16,True,tablet,2.1.2
+132,Dovetail,research repository,5,I was running my first study within 20 minutes of signing up. CSV export includes everything I need for further analysis.,2024-08-16,23,False,tablet,
+133,Fieldkit,field research,5,Real-time co-editing on affinity diagrams is surprisingly smooth. Searching by tag across projects actually works reliably.,2024-01-10,33,True,mobile,
+134,Maze,usability testing,5,Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-10-30,47,False,tablet,4.0.1
+135,Fieldkit,field research,4,Being able to rewatch sessions at 1.5x speed has saved me hours.,2023-08-20,43,False,tablet,
+136,Miro,collaborative whiteboard,5,Being able to link observations to specific interview questions is great. CSV export includes everything I need for further analysis.,2023-09-28,34,True,desktop,9.2.1
+137,Maze,usability testing,5,Template library covers most of my research formats out of the box.,2024-10-15,23,True,desktop,4.0.1
+138,Dovetail,research repository,4,The voice memo feature captures context I'd otherwise lose. The onboarding checklist is paced well — not overwhelming.,2024-10-25,4,True,tablet,
+139,Miro,collaborative whiteboard,5,Real-time co-editing on affinity diagrams is surprisingly smooth. The session recording is crisp and easy to scrub through.,2023-11-08,31,True,mobile,9.2.1
+140,Dovetail,research repository,5,Tag hierarchies let me keep themes organized across a whole study.,2024-11-17,47,True,mobile,1.9.0
+141,Lookback,user research,4,The onboarding checklist is paced well — not overwhelming.,2024-11-01,6,False,desktop,5.1.2
+142,Lookback,user research,4,My whole team can comment on the same session without chaos.,2023-08-11,28,True,,5.3.1
+143,Dovetail,research repository,5,Recording quality is excellent even on slow connections.,2024-10-22,22,True,mobile,
+144,Maze,usability testing,3,Good for solo researchers but team features need more polish.,2024-04-10,5,True,desktop,4.0.1
+145,Lookback,user research,5,Recording quality is excellent even on slow connections. The guest access feature is perfect for external stakeholders.,2023-07-30,4,False,desktop,5.3.1
+146,Lookback,user research,3,"Works fine — nothing remarkable, nothing broken.",2023-08-27,21,False,desktop,5.1.2
+147,Lookback,user research,1,The analysis view gets sluggish with more than 200 tagged clips.,2023-06-28,7,True,,
+148,Fieldkit,field research,2,Auto-transcription accuracy on accented speakers is inconsistent.,2023-01-17,11,True,desktop,2.5.0
+149,Dovetail,research repository,5,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-05-02,28,False,,
+150,Lookback,user research,5,One-click export to Notion is a feature I use every week. I was running my first study within 20 minutes of signing up.,2024-11-05,33,True,tablet,5.1.2
+151,Fieldkit,field research,2,"The difference between clips, highlights, and moments isn't obvious at first.",2023-04-21,31,True,,2.4.1
+152,Miro,collaborative whiteboard,2,No way to pay monthly — annual commitment only is a dealbreaker for some.,2023-03-09,8,True,mobile,
+153,Lookback,user research,4,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-06-27,18,True,mobile,
+154,Lookback,user research,4,Project folders keep multi-phase studies manageable.,2024-10-28,35,False,tablet,5.3.1
+155,Dovetail,research repository,4,Tag hierarchies let me keep themes organized across a whole study. Battery drain is reasonable even during long observation sessions.,2024-03-01,46,True,desktop,
+156,Miro,collaborative whiteboard,4,Permissions are granular enough that clients can view but not edit.,2024-04-30,4,True,mobile,
+157,Fieldkit,field research,2,No way to pay monthly — annual commitment only is a dealbreaker for some.,2024-07-23,3,True,desktop,2.5.3
+158,Lookback,user research,4,I was running my first study within 20 minutes of signing up.,2024-11-12,27,False,mobile,5.1.2
+159,Fieldkit,field research,5,GPS tagging for field observations is exactly what I needed. The help docs are actually written by people who do research.,2023-08-06,9,True,desktop,2.5.0
+160,Dovetail,research repository,5,The guest access feature is perfect for external stakeholders. One-click export to Notion is a feature I use every week.,2023-08-20,27,False,tablet,1.8.4
+161,Lookback,user research,5,The help docs are actually written by people who do research. The timeline view across a research program is genuinely useful.,2023-01-30,11,True,mobile,5.3.1
+162,Maze,usability testing,5,My whole team can comment on the same session without chaos. Searching by tag across projects actually works reliably.,2024-11-04,25,True,,4.1.0
+163,Fieldkit,field research,2,The browser extension stops recording silently sometimes.,2024-04-09,21,True,desktop,2.4.1
+164,Maze,usability testing,5,Being able to link observations to specific interview questions is great.,2023-02-23,9,True,mobile,
+165,Lookback,user research,1,No way to pay monthly — annual commitment only is a dealbreaker for some.,2024-03-10,31,True,desktop,5.2.0
+166,Miro,collaborative whiteboard,4,Being able to link observations to specific interview questions is great. CSV export includes everything I need for further analysis.,2023-10-18,43,True,mobile,9.1.0
+167,Miro,collaborative whiteboard,4,My whole team can comment on the same session without chaos. I was running my first study within 20 minutes of signing up.,2023-01-08,13,True,mobile,9.4.0
+168,Dovetail,research repository,5,The timeline view across a research program is genuinely useful. The session recording is crisp and easy to scrub through.,2024-05-24,47,True,mobile,
+169,Dovetail,research repository,4,The onboarding checklist is paced well — not overwhelming.,2024-11-15,22,True,desktop,
+170,Fieldkit,field research,4,CSV export includes everything I need for further analysis.,2024-08-12,27,True,desktop,2.4.1
+171,Miro,collaborative whiteboard,4,CSV export includes everything I need for further analysis.,2023-06-25,39,True,desktop,
+172,Maze,usability testing,2,Jumping from the free tier to paid is a significant cost jump.,2024-02-15,33,True,desktop,4.2.3
+173,Maze,usability testing,5,Bulk-tagging across sessions is a huge time saver.,2023-03-20,32,True,mobile,4.1.0
+174,Lookback,user research,4,The timeline view across a research program is genuinely useful. The onboarding checklist is paced well — not overwhelming.,2023-08-30,6,True,mobile,5.3.1
+175,Dovetail,research repository,3,Solid core product with rough edges in the advanced workflows.,2024-11-02,4,True,mobile,2.1.2
+176,Miro,collaborative whiteboard,4,The voice memo feature captures context I'd otherwise lose.,2024-08-01,41,True,mobile,9.4.0
+177,Lookback,user research,4,Template library covers most of my research formats out of the box. Automatic session indexing makes it easy to find key moments.,2024-03-28,40,True,mobile,
+178,Maze,usability testing,5,The guest access feature is perfect for external stakeholders. Battery drain is reasonable even during long observation sessions.,2023-02-08,3,True,desktop,4.2.3
+179,Maze,usability testing,2,Guest seats should be free — charging for view-only access feels wrong.,2024-01-29,29,True,mobile,4.2.3
+180,Fieldkit,field research,4,Being able to link observations to specific interview questions is great.,2023-11-26,38,True,desktop,2.5.0
+181,Dovetail,research repository,5,CSV export includes everything I need for further analysis.,2023-12-18,45,True,desktop,1.9.0
+182,Dovetail,research repository,1,"The difference between clips, highlights, and moments isn't obvious at first.",2024-09-16,10,True,mobile,2.1.2
+183,Maze,usability testing,4,The timeline view across a research program is genuinely useful.,2023-02-23,40,True,,4.2.3
+184,Fieldkit,field research,4,Battery drain is reasonable even during long observation sessions. Being able to link observations to specific interview questions is great.,2023-06-03,21,True,mobile,
+185,Dovetail,research repository,5,Real-time co-editing on affinity diagrams is surprisingly smooth. Project folders keep multi-phase studies manageable.,2023-11-14,35,True,,2.0.0
+186,Maze,usability testing,5,The help docs are actually written by people who do research. Smart folders auto-populate based on tags — surprisingly powerful.,2024-06-04,23,True,mobile,4.0.1
+187,Maze,usability testing,3,"Works fine — nothing remarkable, nothing broken.",2023-12-16,31,True,mobile,4.1.0
+188,Dovetail,research repository,3,"Decent tool for the price, though the competition is catching up.",2023-04-14,32,False,tablet,
+189,Lookback,user research,1,The Figma integration is read-only; I can't push annotations back. The browser extension stops recording silently sometimes.,2023-06-16,11,False,tablet,5.1.2
+190,Lookback,user research,5,Tag hierarchies let me keep themes organized across a whole study. The highlight reel feature is genuinely useful for presentations.,2024-03-30,39,True,mobile,5.3.1
+191,Miro,collaborative whiteboard,3,"Works fine — nothing remarkable, nothing broken.",2023-11-13,30,False,,9.2.1
+192,Dovetail,research repository,4,Battery drain is reasonable even during long observation sessions.,2023-10-16,24,True,mobile,2.0.0
+193,Miro,collaborative whiteboard,5,Custom fields on participants let me filter by screener criteria.,2023-05-22,16,True,mobile,9.4.0
+194,Miro,collaborative whiteboard,5,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-06-12,7,True,mobile,9.4.0
+195,Dovetail,research repository,4,The mobile app doesn't crash when I switch between apps mid-session.,2023-04-04,14,False,mobile,1.8.4
+196,Maze,usability testing,5,CSV export includes everything I need for further analysis. Sharing clips with stakeholders takes about 30 seconds.,2024-01-31,5,True,mobile,4.2.3
+197,Fieldkit,field research,4,Recording quality is excellent even on slow connections.,2023-05-21,2,True,mobile,2.4.1
+198,Miro,collaborative whiteboard,5,Tag hierarchies let me keep themes organized across a whole study.,2023-01-06,5,True,desktop,9.2.1
+199,Dovetail,research repository,5,The voice memo feature captures context I'd otherwise lose.,2023-04-24,18,True,,
+200,Fieldkit,field research,1,Keyboard shortcuts aren't discoverable — I found them by accident.,2023-04-24,31,True,tablet,2.4.1
+201,Fieldkit,field research,5,The mobile app doesn't crash when I switch between apps mid-session.,2023-10-26,27,True,desktop,2.5.3
+202,Maze,usability testing,3,The fundamentals are strong; the extras feel half-finished.,2023-07-11,42,True,mobile,
+203,Lookback,user research,5,Session recordings sync instantly — no waiting around.,2024-06-03,35,True,mobile,5.1.2
+204,Miro,collaborative whiteboard,1,Documentation for advanced filtering could be much clearer. No way to pay monthly — annual commitment only is a dealbreaker for some.,2023-03-11,22,True,mobile,9.1.0
+205,Fieldkit,field research,5,Template library covers most of my research formats out of the box. The guest access feature is perfect for external stakeholders.,2023-12-13,41,True,mobile,2.5.3
+206,Miro,collaborative whiteboard,5,The highlight reel feature is genuinely useful for presentations.,2023-03-06,45,False,tablet,
+207,Miro,collaborative whiteboard,1,Loading large projects takes noticeably longer than it used to.,2023-02-12,20,False,desktop,9.3.0
+208,Lookback,user research,4,Being able to link observations to specific interview questions is great.,2023-02-07,41,True,mobile,5.2.0
+209,Maze,usability testing,5,Recording quality is excellent even on slow connections. Video clips export cleanly with timecodes intact.,2024-02-14,47,True,desktop,
+210,Miro,collaborative whiteboard,4,Tag hierarchies let me keep themes organized across a whole study.,2024-01-12,33,True,,9.4.0
+211,Fieldkit,field research,5,Automatic session indexing makes it easy to find key moments.,2023-07-04,34,True,tablet,
+212,Fieldkit,field research,2,Can't reorder participants within a study without re-importing.,2024-03-12,10,True,tablet,2.4.1
+213,Maze,usability testing,4,Template library covers most of my research formats out of the box.,2024-03-21,17,True,mobile,
+214,Fieldkit,field research,2,Documentation for advanced filtering could be much clearer.,2024-11-26,10,False,desktop,3.0.0
+215,Dovetail,research repository,5,Screener templates saved me from writing survey questions from scratch. Being able to rewatch sessions at 1.5x speed has saved me hours.,2024-10-22,23,True,mobile,2.0.0
+216,Lookback,user research,1,Video processing sometimes takes longer than the session itself.,2024-01-16,28,False,mobile,
+217,Lookback,user research,2,No dark mode — surprising for a tool used in low-light observation settings. New team members consistently find the first study setup confusing.,2023-04-27,1,False,mobile,5.2.0
+218,Miro,collaborative whiteboard,4,Works offline and syncs when I get back to WiFi — essential for fieldwork. Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-08-08,39,True,desktop,9.1.0
+219,Miro,collaborative whiteboard,3,Solid core product with rough edges in the advanced workflows.,2023-03-17,28,True,desktop,9.2.1
+220,Miro,collaborative whiteboard,5,The timeline view across a research program is genuinely useful.,2023-03-08,35,True,mobile,
+221,Maze,usability testing,5,The onboarding checklist is paced well — not overwhelming.,2024-06-04,14,True,,4.2.3
+222,Dovetail,research repository,5,Tag hierarchies let me keep themes organized across a whole study. The help docs are actually written by people who do research.,2024-01-13,29,False,mobile,
+223,Lookback,user research,2,The per-seat pricing gets expensive fast when you include observers. The mobile app crashes when the screen locks mid-recording.,2024-02-25,26,False,mobile,5.2.0
+224,Fieldkit,field research,2,No built-in way to generate a structured debrief template from tags.,2024-11-27,33,True,,3.0.0
+225,Lookback,user research,5,I can tag clips without leaving the playback view.,2023-02-26,7,True,mobile,5.1.2
+226,Maze,usability testing,3,I've used it for two years. It's reliable but not exciting.,2023-08-19,22,False,mobile,4.0.1
+227,Lookback,user research,5,Project folders keep multi-phase studies manageable. The help docs are actually written by people who do research.,2023-10-09,8,True,desktop,5.1.2
+228,Lookback,user research,4,The mobile app doesn't crash when I switch between apps mid-session.,2024-08-17,9,True,,5.3.1
+229,Lookback,user research,5,GPS tagging for field observations is exactly what I needed.,2024-07-31,2,False,mobile,5.3.1
+230,Fieldkit,field research,2,Undo doesn't work in the affinity diagram view — a real problem.,2024-08-08,26,True,desktop,2.4.1
+231,Fieldkit,field research,4,The help docs are actually written by people who do research. Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-09-08,43,True,desktop,
+232,Miro,collaborative whiteboard,2,Jumping from the free tier to paid is a significant cost jump.,2024-05-10,29,True,desktop,9.1.0
+233,Lookback,user research,2,Can't reorder participants within a study without re-importing.,2023-05-14,23,True,desktop,
+234,Fieldkit,field research,4,CSV export includes everything I need for further analysis. I can tag clips without leaving the playback view.,2023-04-10,3,True,mobile,2.5.0
+235,Miro,collaborative whiteboard,5,The highlight reel feature is genuinely useful for presentations.,2023-06-13,20,False,mobile,9.3.0
+236,Maze,usability testing,3,Solid core product with rough edges in the advanced workflows.,2024-05-25,32,True,mobile,4.0.1
+237,Maze,usability testing,4,Automatic session indexing makes it easy to find key moments.,2023-09-04,13,True,desktop,
+238,Fieldkit,field research,1,Keyboard shortcuts aren't discoverable — I found them by accident.,2024-10-31,43,True,desktop,2.5.0
+239,Lookback,user research,1,Storage limits hit quickly when you're recording long sessions. Documentation for advanced filtering could be much clearer.,2024-02-17,23,True,desktop,
+240,Fieldkit,field research,5,Bulk-tagging across sessions is a huge time saver.,2023-03-17,24,True,tablet,2.5.0
+241,Lookback,user research,4,The voice memo feature captures context I'd otherwise lose. Automatic session indexing makes it easy to find key moments.,2024-01-18,21,True,desktop,5.3.1
+242,Maze,usability testing,5,Searching by tag across projects actually works reliably.,2024-05-27,2,True,mobile,4.0.1
+243,Dovetail,research repository,5,Smart folders auto-populate based on tags — surprisingly powerful.,2023-06-02,38,False,desktop,1.8.4
+244,Dovetail,research repository,4,GPS tagging for field observations is exactly what I needed. Template library covers most of my research formats out of the box.,2024-08-30,21,True,desktop,2.1.2
+245,Lookback,user research,4,The help docs are actually written by people who do research. Recording quality is excellent even on slow connections.,2023-12-06,43,True,mobile,5.2.0
+246,Miro,collaborative whiteboard,5,Project folders keep multi-phase studies manageable.,2023-09-29,41,False,mobile,9.4.0
+247,Lookback,user research,5,I was running my first study within 20 minutes of signing up.,2023-06-24,33,True,mobile,5.2.0
+248,Lookback,user research,5,The highlight reel feature is genuinely useful for presentations.,2023-09-06,2,True,mobile,5.2.0
+249,Fieldkit,field research,3,Good enough for most projects but I always end up exporting to a spreadsheet anyway.,2023-11-18,26,True,desktop,
+250,Dovetail,research repository,4,Being able to link observations to specific interview questions is great.,2023-03-05,45,True,mobile,2.1.2
+251,Dovetail,research repository,4,Screener templates saved me from writing survey questions from scratch.,2023-11-18,11,True,tablet,2.0.0
+252,Lookback,user research,4,Permissions are granular enough that clients can view but not edit.,2023-07-16,15,True,desktop,
+253,Maze,usability testing,3,"Decent tool for the price, though the competition is catching up.",2023-10-23,45,True,desktop,4.0.1
+254,Miro,collaborative whiteboard,4,The guest access feature is perfect for external stakeholders.,2023-10-08,18,True,mobile,9.4.0
+255,Lookback,user research,4,PDF reports look professional enough to share with executives.,2023-05-30,18,True,desktop,5.2.0
+256,Fieldkit,field research,4,PDF reports look professional enough to share with executives.,2023-08-08,12,False,mobile,2.5.3
+257,Maze,usability testing,5,Template library covers most of my research formats out of the box. The voice memo feature captures context I'd otherwise lose.,2023-09-03,15,True,,
+258,Lookback,user research,3,"Works fine — nothing remarkable, nothing broken.",2023-02-23,6,True,mobile,5.1.2
+259,Miro,collaborative whiteboard,2,Loading large projects takes noticeably longer than it used to.,2023-06-11,26,True,mobile,9.1.0
+260,Miro,collaborative whiteboard,4,Bulk-tagging across sessions is a huge time saver. Project folders keep multi-phase studies manageable.,2023-04-02,41,True,mobile,9.2.1
+261,Lookback,user research,5,Project folders keep multi-phase studies manageable.,2023-06-29,26,False,,5.2.0
+262,Dovetail,research repository,5,Automatic session indexing makes it easy to find key moments.,2023-07-10,47,False,tablet,1.9.0
+263,Maze,usability testing,5,Recording quality is excellent even on slow connections.,2023-04-20,21,True,mobile,
+264,Lookback,user research,4,Searching by tag across projects actually works reliably.,2023-07-17,7,True,desktop,
+265,Miro,collaborative whiteboard,5,The onboarding checklist is paced well — not overwhelming. Permissions are granular enough that clients can view but not edit.,2024-08-04,43,False,desktop,
+266,Dovetail,research repository,5,Screener templates saved me from writing survey questions from scratch.,2024-06-11,20,True,tablet,1.8.4
+267,Fieldkit,field research,3,Solid core product with rough edges in the advanced workflows.,2024-05-03,20,False,mobile,
+268,Fieldkit,field research,3,"Works fine — nothing remarkable, nothing broken.",2024-04-02,17,False,mobile,3.0.0
+269,Maze,usability testing,5,Works offline and syncs when I get back to WiFi — essential for fieldwork. Sharing clips with stakeholders takes about 30 seconds.,2023-03-05,42,True,mobile,4.2.3
+270,Maze,usability testing,3,"Strong on data collection, weaker on synthesis.",2024-05-29,45,False,mobile,4.1.0
+271,Fieldkit,field research,5,Permissions are granular enough that clients can view but not edit.,2023-08-13,8,True,desktop,2.5.3
+272,Miro,collaborative whiteboard,5,GPS tagging for field observations is exactly what I needed.,2024-07-16,30,False,mobile,9.3.0
+273,Dovetail,research repository,5,The help docs are actually written by people who do research.,2023-03-25,33,True,mobile,
+274,Maze,usability testing,2,I've lost tags twice after a session due to a sync issue. Search results are slow when the repository is large.,2024-07-03,9,True,tablet,
+275,Lookback,user research,4,The onboarding checklist is paced well — not overwhelming.,2024-05-15,5,False,desktop,5.2.0
+276,Miro,collaborative whiteboard,5,The highlight reel feature is genuinely useful for presentations.,2024-04-12,36,True,tablet,9.1.0
+277,Miro,collaborative whiteboard,5,My whole team can comment on the same session without chaos. Being able to rewatch sessions at 1.5x speed has saved me hours.,2024-08-15,4,True,desktop,9.1.0
+278,Maze,usability testing,5,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2023-03-12,30,True,tablet,4.1.0
+279,Miro,collaborative whiteboard,3,Solid core product with rough edges in the advanced workflows.,2024-10-18,46,True,desktop,
+280,Miro,collaborative whiteboard,4,Video clips export cleanly with timecodes intact.,2024-01-22,24,True,mobile,9.3.0
+281,Lookback,user research,2,No built-in way to generate a structured debrief template from tags. The mobile app crashes when the screen locks mid-recording.,2023-05-11,46,False,tablet,
+282,Fieldkit,field research,5,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-07-11,27,True,mobile,2.4.1
+283,Dovetail,research repository,3,I've used it for two years. It's reliable but not exciting.,2023-06-08,17,True,mobile,2.1.2
+284,Fieldkit,field research,1,Keyboard shortcuts aren't discoverable — I found them by accident.,2023-01-17,15,True,desktop,2.4.1
+285,Fieldkit,field research,5,One-click export to Notion is a feature I use every week.,2023-02-19,15,False,mobile,2.5.0
+286,Miro,collaborative whiteboard,4,The mobile app doesn't crash when I switch between apps mid-session.,2023-02-27,8,True,mobile,9.4.0
+287,Maze,usability testing,3,Setup was smooth; ongoing use has revealed some rough edges.,2024-08-12,20,True,mobile,4.0.1
+288,Maze,usability testing,3,Solid core product with rough edges in the advanced workflows.,2024-11-07,33,True,mobile,4.1.0
+289,Maze,usability testing,4,The voice memo feature captures context I'd otherwise lose.,2023-06-29,40,True,mobile,4.0.1
+290,Lookback,user research,4,Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-11-23,44,True,,5.1.2
+291,Dovetail,research repository,4,Searching by tag across projects actually works reliably.,2023-08-19,19,False,desktop,
+292,Dovetail,research repository,5,Session recordings sync instantly — no waiting around.,2024-03-02,35,True,mobile,2.1.2
+293,Miro,collaborative whiteboard,3,"Works fine — nothing remarkable, nothing broken.",2023-12-05,41,True,,9.2.1
+294,Miro,collaborative whiteboard,5,Session recordings sync instantly — no waiting around.,2023-07-15,3,True,desktop,9.3.0
+295,Lookback,user research,5,Project folders keep multi-phase studies manageable. The voice memo feature captures context I'd otherwise lose.,2023-08-11,30,True,mobile,5.2.0
+296,Maze,usability testing,4,Being able to rewatch sessions at 1.5x speed has saved me hours.,2023-05-01,47,False,tablet,4.0.1
+297,Miro,collaborative whiteboard,5,The help docs are actually written by people who do research.,2024-02-11,15,True,desktop,9.3.0
+298,Maze,usability testing,4,GPS tagging for field observations is exactly what I needed. The guest access feature is perfect for external stakeholders.,2024-05-24,29,True,mobile,
+299,Miro,collaborative whiteboard,5,Sharing clips with stakeholders takes about 30 seconds. Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-07-30,14,False,desktop,
+300,Fieldkit,field research,3,"Gets the job done, but the workflow has too many clicks for routine tasks.",2024-08-16,46,True,mobile,2.5.3
+301,Dovetail,research repository,3,"Works fine — nothing remarkable, nothing broken.",2024-01-24,36,False,mobile,1.9.0
+302,Miro,collaborative whiteboard,4,Template library covers most of my research formats out of the box. Video clips export cleanly with timecodes intact.,2024-04-16,10,False,tablet,9.2.1
+303,Maze,usability testing,3,Setup was smooth; ongoing use has revealed some rough edges.,2024-07-13,31,True,desktop,4.1.0
+304,Lookback,user research,5,Session recordings sync instantly — no waiting around. The tagging workflow is intuitive once you get used to it.,2023-01-07,26,True,desktop,5.3.1
+305,Dovetail,research repository,2,Loading large projects takes noticeably longer than it used to. Undo doesn't work in the affinity diagram view — a real problem.,2023-03-03,39,True,tablet,1.9.0
+306,Lookback,user research,5,Screener templates saved me from writing survey questions from scratch. The voice memo feature captures context I'd otherwise lose.,2024-02-26,0,True,tablet,5.1.2
+307,Maze,usability testing,4,My whole team can comment on the same session without chaos.,2024-11-21,27,False,tablet,4.1.0
+308,Dovetail,research repository,2,Guest seats should be free — charging for view-only access feels wrong. The Figma integration is read-only; I can't push annotations back.,2024-06-23,16,False,desktop,2.0.0
+309,Maze,usability testing,5,Recording quality is excellent even on slow connections.,2024-04-15,36,True,desktop,4.2.3
+310,Dovetail,research repository,4,Project folders keep multi-phase studies manageable.,2024-10-27,2,True,tablet,1.8.4
+311,Miro,collaborative whiteboard,4,CSV export includes everything I need for further analysis.,2023-06-25,5,True,desktop,9.4.0
+312,Miro,collaborative whiteboard,5,The guest access feature is perfect for external stakeholders.,2023-04-08,33,False,tablet,9.1.0
+313,Dovetail,research repository,3,Setup was smooth; ongoing use has revealed some rough edges.,2024-08-03,30,True,desktop,1.9.0
+314,Fieldkit,field research,5,The guest access feature is perfect for external stakeholders.,2023-02-03,11,False,,2.5.3
+315,Maze,usability testing,1,Search results are slow when the repository is large. I've lost tags twice after a session due to a sync issue.,2023-11-03,10,True,mobile,4.1.0
+316,Lookback,user research,5,One-click export to Notion is a feature I use every week. Custom fields on participants let me filter by screener criteria.,2023-03-22,32,False,mobile,
+317,Maze,usability testing,1,New team members consistently find the first study setup confusing.,2023-12-15,38,False,,4.0.1
+318,Lookback,user research,4,The timeline view across a research program is genuinely useful. Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-05-17,14,True,mobile,
+319,Miro,collaborative whiteboard,4,The help docs are actually written by people who do research.,2023-03-29,39,True,mobile,9.1.0
+320,Dovetail,research repository,5,Recording quality is excellent even on slow connections. Custom fields on participants let me filter by screener criteria.,2024-02-03,20,True,tablet,1.8.4
+321,Fieldkit,field research,1,No dark mode — surprising for a tool used in low-light observation settings.,2023-10-04,6,True,tablet,2.5.0
+322,Dovetail,research repository,4,The voice memo feature captures context I'd otherwise lose.,2023-04-16,1,True,mobile,1.9.0
+323,Lookback,user research,2,Undo doesn't work in the affinity diagram view — a real problem.,2023-01-13,18,True,desktop,
+324,Fieldkit,field research,5,The mobile app doesn't crash when I switch between apps mid-session.,2023-06-23,43,True,mobile,2.5.0
+325,Dovetail,research repository,3,"Decent tool for the price, though the competition is catching up.",2024-05-19,9,True,mobile,1.8.4
+326,Miro,collaborative whiteboard,4,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-01-05,16,False,desktop,9.2.1
+327,Miro,collaborative whiteboard,5,Tag hierarchies let me keep themes organized across a whole study. CSV export includes everything I need for further analysis.,2024-02-10,21,False,,9.3.0
+328,Miro,collaborative whiteboard,5,Real-time co-editing on affinity diagrams is surprisingly smooth. Being able to link observations to specific interview questions is great.,2023-05-20,19,True,,9.4.0
+329,Dovetail,research repository,4,Tag hierarchies let me keep themes organized across a whole study.,2023-10-26,47,True,mobile,
+330,Miro,collaborative whiteboard,5,Custom fields on participants let me filter by screener criteria. Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-01-09,7,False,mobile,
+331,Dovetail,research repository,5,The mobile app doesn't crash when I switch between apps mid-session.,2024-07-17,1,False,,2.1.2
+332,Miro,collaborative whiteboard,5,Tag hierarchies let me keep themes organized across a whole study.,2023-03-12,26,True,desktop,9.2.1
+333,Dovetail,research repository,5,Bulk-tagging across sessions is a huge time saver.,2024-03-09,24,True,tablet,2.1.2
+334,Lookback,user research,4,One-click export to Notion is a feature I use every week.,2024-03-04,34,True,mobile,5.2.0
+335,Maze,usability testing,5,Being able to link observations to specific interview questions is great.,2023-03-29,6,False,desktop,4.2.3
+336,Maze,usability testing,3,"Gets the job done, but the workflow has too many clicks for routine tasks.",2023-02-15,36,False,desktop,4.0.1
+337,Miro,collaborative whiteboard,5,Real-time co-editing on affinity diagrams is surprisingly smooth. Recording quality is excellent even on slow connections.,2023-08-16,32,False,,9.2.1
+338,Lookback,user research,5,The mobile app doesn't crash when I switch between apps mid-session.,2024-02-05,29,False,mobile,5.1.2
+339,Lookback,user research,5,Bulk-tagging across sessions is a huge time saver.,2024-05-09,6,True,,5.2.0
+340,Fieldkit,field research,2,Occasional sync errors between mobile and desktop are frustrating. The browser extension stops recording silently sometimes.,2024-06-17,30,True,,2.4.1
+341,Fieldkit,field research,4,Screener templates saved me from writing survey questions from scratch. My whole team can comment on the same session without chaos.,2023-04-28,1,False,desktop,2.4.1
+342,Fieldkit,field research,5,I can tag clips without leaving the playback view.,2024-07-19,10,True,tablet,2.5.0
+343,Miro,collaborative whiteboard,5,Tag hierarchies let me keep themes organized across a whole study.,2023-07-10,40,True,desktop,9.2.1
+344,Miro,collaborative whiteboard,1,The browser extension stops recording silently sometimes.,2024-03-15,24,True,desktop,9.1.0
+345,Dovetail,research repository,3,Setup was smooth; ongoing use has revealed some rough edges.,2023-03-06,36,True,desktop,1.9.0
+346,Lookback,user research,3,I've used it for two years. It's reliable but not exciting.,2023-07-21,29,True,desktop,5.2.0
+347,Miro,collaborative whiteboard,4,Template library covers most of my research formats out of the box.,2024-09-17,25,True,desktop,9.4.0
+348,Maze,usability testing,4,One-click export to Notion is a feature I use every week. The timeline view across a research program is genuinely useful.,2024-09-21,37,True,mobile,
+349,Dovetail,research repository,4,Bulk-tagging across sessions is a huge time saver. The highlight reel feature is genuinely useful for presentations.,2024-06-07,24,True,desktop,1.9.0
+350,Dovetail,research repository,5,The highlight reel feature is genuinely useful for presentations.,2024-07-04,44,False,mobile,1.8.4
+351,Dovetail,research repository,4,PDF reports look professional enough to share with executives. Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-09-26,3,False,desktop,1.8.4
+352,Fieldkit,field research,4,Tag hierarchies let me keep themes organized across a whole study.,2024-06-01,41,True,desktop,2.4.1
+353,Miro,collaborative whiteboard,4,Smart folders auto-populate based on tags — surprisingly powerful.,2023-03-26,36,True,mobile,9.3.0
+354,Dovetail,research repository,4,Sharing clips with stakeholders takes about 30 seconds.,2023-06-22,29,True,tablet,1.9.0
+355,Miro,collaborative whiteboard,4,Session recordings sync instantly — no waiting around. Template library covers most of my research formats out of the box.,2024-07-09,2,False,,
+356,Miro,collaborative whiteboard,4,CSV export includes everything I need for further analysis.,2024-10-31,15,True,desktop,9.4.0
+357,Fieldkit,field research,4,My whole team can comment on the same session without chaos.,2023-05-01,15,True,tablet,2.5.0
+358,Lookback,user research,5,Being able to link observations to specific interview questions is great.,2023-06-19,39,True,tablet,5.2.0
+359,Dovetail,research repository,5,Project folders keep multi-phase studies manageable.,2024-06-29,17,True,desktop,1.8.4
+360,Dovetail,research repository,4,Template library covers most of my research formats out of the box. The guest access feature is perfect for external stakeholders.,2024-11-26,6,True,mobile,1.8.4
+361,Miro,collaborative whiteboard,5,Sharing clips with stakeholders takes about 30 seconds.,2023-05-16,15,True,desktop,9.2.1
+362,Maze,usability testing,5,Smart folders auto-populate based on tags — surprisingly powerful.,2024-08-14,40,True,tablet,4.2.3
+363,Miro,collaborative whiteboard,4,The session recording is crisp and easy to scrub through.,2023-10-12,44,False,desktop,9.4.0
+364,Maze,usability testing,4,PDF reports look professional enough to share with executives.,2023-04-06,46,False,mobile,
+365,Maze,usability testing,5,Being able to link observations to specific interview questions is great. The highlight reel feature is genuinely useful for presentations.,2024-05-21,17,True,mobile,4.1.0
+366,Maze,usability testing,4,The mobile app doesn't crash when I switch between apps mid-session.,2024-05-11,21,False,tablet,
+367,Fieldkit,field research,1,The tag hierarchy system takes a few sessions to really click. Video processing sometimes takes longer than the session itself.,2024-04-12,0,False,tablet,
+368,Miro,collaborative whiteboard,3,Setup was smooth; ongoing use has revealed some rough edges.,2023-05-16,41,True,desktop,9.4.0
+369,Maze,usability testing,2,Can't reorder participants within a study without re-importing. Loading large projects takes noticeably longer than it used to.,2024-02-10,40,True,mobile,
+370,Dovetail,research repository,4,The session recording is crisp and easy to scrub through. Works offline and syncs when I get back to WiFi — essential for fieldwork.,2023-05-16,37,True,mobile,2.1.2
+371,Miro,collaborative whiteboard,1,No built-in way to generate a structured debrief template from tags.,2024-03-08,44,True,mobile,9.1.0
+372,Fieldkit,field research,3,Good for solo researchers but team features need more polish.,2023-04-15,6,True,mobile,2.5.0
+373,Maze,usability testing,2,The analysis view gets sluggish with more than 200 tagged clips. Guest seats should be free — charging for view-only access feels wrong.,2024-10-27,10,True,desktop,4.1.0
+374,Dovetail,research repository,5,Tag hierarchies let me keep themes organized across a whole study.,2024-03-29,13,True,mobile,2.0.0
+375,Fieldkit,field research,2,Guest seats should be free — charging for view-only access feels wrong.,2023-12-26,27,True,desktop,
+376,Dovetail,research repository,3,"Strong on data collection, weaker on synthesis.",2023-03-28,15,True,mobile,1.8.4
+377,Lookback,user research,5,My whole team can comment on the same session without chaos.,2024-11-05,19,True,tablet,5.2.0
+378,Lookback,user research,4,Screener templates saved me from writing survey questions from scratch. Being able to rewatch sessions at 1.5x speed has saved me hours.,2024-05-21,24,True,mobile,
+379,Miro,collaborative whiteboard,5,Session recordings sync instantly — no waiting around.,2023-01-13,23,False,desktop,9.1.0
+380,Dovetail,research repository,4,Being able to link observations to specific interview questions is great.,2024-07-13,43,True,tablet,2.1.2
+381,Miro,collaborative whiteboard,5,Project folders keep multi-phase studies manageable. The session recording is crisp and easy to scrub through.,2023-09-26,13,True,mobile,
+382,Fieldkit,field research,5,One-click export to Notion is a feature I use every week. Being able to link observations to specific interview questions is great.,2024-03-01,27,True,tablet,2.5.3
+383,Fieldkit,field research,5,The voice memo feature captures context I'd otherwise lose. Recording quality is excellent even on slow connections.,2023-03-22,32,False,mobile,2.4.1
+384,Dovetail,research repository,4,One-click export to Notion is a feature I use every week.,2024-10-27,43,True,mobile,1.8.4
+385,Maze,usability testing,5,The onboarding checklist is paced well — not overwhelming. Automatic session indexing makes it easy to find key moments.,2023-04-29,29,True,desktop,4.2.3
+386,Fieldkit,field research,4,The onboarding checklist is paced well — not overwhelming. Custom fields on participants let me filter by screener criteria.,2023-01-12,10,True,desktop,2.4.1
+387,Maze,usability testing,4,The timeline view across a research program is genuinely useful. Bulk-tagging across sessions is a huge time saver.,2023-05-01,1,True,mobile,4.2.3
+388,Miro,collaborative whiteboard,4,Recording quality is excellent even on slow connections.,2024-08-13,40,True,mobile,9.2.1
+389,Miro,collaborative whiteboard,4,Automatic session indexing makes it easy to find key moments.,2023-06-20,23,True,mobile,
+390,Fieldkit,field research,5,I was running my first study within 20 minutes of signing up. Works offline and syncs when I get back to WiFi — essential for fieldwork.,2023-02-15,0,True,,2.5.0
+391,Miro,collaborative whiteboard,4,I can tag clips without leaving the playback view.,2023-02-06,35,False,mobile,9.4.0
+392,Miro,collaborative whiteboard,3,"Works fine — nothing remarkable, nothing broken.",2024-03-02,46,True,desktop,9.4.0
+393,Fieldkit,field research,5,Session recordings sync instantly — no waiting around.,2023-02-23,11,True,mobile,2.5.0
+394,Lookback,user research,5,CSV export includes everything I need for further analysis.,2023-10-17,19,True,mobile,
+395,Lookback,user research,4,Sharing clips with stakeholders takes about 30 seconds. One-click export to Notion is a feature I use every week.,2023-09-06,29,True,desktop,5.2.0
+396,Miro,collaborative whiteboard,5,Custom fields on participants let me filter by screener criteria.,2024-07-13,15,True,mobile,
+397,Miro,collaborative whiteboard,1,Undo doesn't work in the affinity diagram view — a real problem.,2023-01-10,21,True,mobile,
+398,Miro,collaborative whiteboard,5,Template library covers most of my research formats out of the box. The mobile app doesn't crash when I switch between apps mid-session.,2024-03-05,31,False,mobile,9.1.0
+399,Dovetail,research repository,5,The session recording is crisp and easy to scrub through.,2024-06-16,26,True,desktop,2.0.0
+400,Maze,usability testing,4,I was running my first study within 20 minutes of signing up.,2024-06-01,8,True,mobile,4.2.3
+401,Miro,collaborative whiteboard,2,I've lost tags twice after a session due to a sync issue.,2023-05-14,15,True,,9.1.0
+402,Maze,usability testing,5,PDF reports look professional enough to share with executives. Sharing clips with stakeholders takes about 30 seconds.,2023-03-18,12,True,,4.0.1
+403,Lookback,user research,2,Jumping from the free tier to paid is a significant cost jump.,2023-11-18,26,True,mobile,5.1.2
+404,Maze,usability testing,5,Tag hierarchies let me keep themes organized across a whole study. CSV export includes everything I need for further analysis.,2023-04-03,10,False,tablet,4.1.0
+405,Maze,usability testing,5,The help docs are actually written by people who do research. Sharing clips with stakeholders takes about 30 seconds.,2023-04-04,45,True,,4.1.0
+406,Maze,usability testing,4,Recording quality is excellent even on slow connections. My whole team can comment on the same session without chaos.,2024-02-19,28,True,,4.1.0
+407,Lookback,user research,3,Good enough for most projects but I always end up exporting to a spreadsheet anyway.,2023-04-15,8,True,tablet,5.2.0
+408,Fieldkit,field research,5,I can tag clips without leaving the playback view. GPS tagging for field observations is exactly what I needed.,2024-10-07,41,True,mobile,2.5.0
+409,Lookback,user research,3,Good for solo researchers but team features need more polish.,2023-01-23,4,True,mobile,5.2.0
+410,Miro,collaborative whiteboard,5,Recording quality is excellent even on slow connections. Works offline and syncs when I get back to WiFi — essential for fieldwork.,2023-06-22,36,True,tablet,9.3.0
+411,Miro,collaborative whiteboard,4,Video clips export cleanly with timecodes intact. I can tag clips without leaving the playback view.,2023-10-09,17,True,,9.4.0
+412,Dovetail,research repository,1,The mobile app crashes when the screen locks mid-recording. No dark mode — surprising for a tool used in low-light observation settings.,2024-02-26,35,True,,
+413,Fieldkit,field research,4,Tag hierarchies let me keep themes organized across a whole study. The onboarding checklist is paced well — not overwhelming.,2024-10-07,34,False,desktop,2.5.0
+414,Miro,collaborative whiteboard,5,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-05-11,22,False,mobile,9.3.0
+415,Lookback,user research,4,Sharing clips with stakeholders takes about 30 seconds. The onboarding checklist is paced well — not overwhelming.,2023-01-31,17,True,desktop,
+416,Miro,collaborative whiteboard,4,Being able to link observations to specific interview questions is great.,2023-06-13,6,True,mobile,9.3.0
+417,Dovetail,research repository,3,Setup was smooth; ongoing use has revealed some rough edges.,2023-02-27,14,True,mobile,2.1.2
+418,Miro,collaborative whiteboard,4,Custom fields on participants let me filter by screener criteria. GPS tagging for field observations is exactly what I needed.,2024-01-03,37,True,tablet,
+419,Maze,usability testing,5,The mobile app doesn't crash when I switch between apps mid-session.,2023-07-12,31,True,desktop,4.1.0
+420,Dovetail,research repository,4,The session recording is crisp and easy to scrub through. My whole team can comment on the same session without chaos.,2024-06-23,30,True,desktop,
+421,Lookback,user research,3,Solid core product with rough edges in the advanced workflows.,2023-12-15,45,True,tablet,5.2.0
+422,Maze,usability testing,1,Search results are slow when the repository is large.,2023-05-26,7,False,desktop,4.1.0
+423,Maze,usability testing,5,Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-12-11,19,True,mobile,4.0.1
+424,Dovetail,research repository,5,Video clips export cleanly with timecodes intact.,2023-06-28,45,False,mobile,
+425,Lookback,user research,5,Searching by tag across projects actually works reliably.,2024-01-23,19,False,desktop,5.2.0
+426,Maze,usability testing,2,Guest seats should be free — charging for view-only access feels wrong.,2024-08-04,2,True,,4.2.3
+427,Maze,usability testing,5,The mobile app doesn't crash when I switch between apps mid-session.,2023-04-17,31,True,desktop,4.0.1
+428,Fieldkit,field research,3,I've used it for two years. It's reliable but not exciting.,2023-06-21,40,False,desktop,
+429,Fieldkit,field research,5,Template library covers most of my research formats out of the box.,2023-09-29,13,True,,3.0.0
+430,Fieldkit,field research,4,Project folders keep multi-phase studies manageable.,2023-02-19,24,True,desktop,
+431,Miro,collaborative whiteboard,5,Video clips export cleanly with timecodes intact.,2023-12-26,34,True,,
+432,Miro,collaborative whiteboard,5,The mobile app doesn't crash when I switch between apps mid-session. The session recording is crisp and easy to scrub through.,2023-10-29,1,True,,9.3.0
+433,Fieldkit,field research,2,Video processing sometimes takes longer than the session itself. Guest seats should be free — charging for view-only access feels wrong.,2023-04-06,21,True,desktop,2.4.1
+434,Lookback,user research,5,I was running my first study within 20 minutes of signing up.,2024-10-31,10,True,mobile,5.3.1
+435,Miro,collaborative whiteboard,3,Good for solo researchers but team features need more polish.,2023-12-06,13,False,desktop,9.3.0
+436,Miro,collaborative whiteboard,5,The help docs are actually written by people who do research. Permissions are granular enough that clients can view but not edit.,2023-09-01,6,True,tablet,9.1.0
+437,Lookback,user research,4,The highlight reel feature is genuinely useful for presentations. Automatic session indexing makes it easy to find key moments.,2023-03-31,18,False,,5.3.1
+438,Lookback,user research,4,The session recording is crisp and easy to scrub through. The timeline view across a research program is genuinely useful.,2023-03-25,30,False,mobile,5.2.0
+439,Maze,usability testing,5,Video clips export cleanly with timecodes intact.,2023-09-29,5,True,desktop,4.0.1
+440,Miro,collaborative whiteboard,3,The fundamentals are strong; the extras feel half-finished.,2024-01-14,11,True,mobile,9.1.0
+441,Maze,usability testing,4,Sharing clips with stakeholders takes about 30 seconds.,2024-07-31,3,True,desktop,4.1.0
+442,Fieldkit,field research,2,The Figma integration is read-only; I can't push annotations back.,2024-08-26,14,True,mobile,2.4.1
+443,Miro,collaborative whiteboard,5,One-click export to Notion is a feature I use every week.,2024-05-01,36,False,mobile,9.3.0
+444,Miro,collaborative whiteboard,4,CSV export includes everything I need for further analysis.,2024-06-13,36,True,,9.2.1
+445,Lookback,user research,2,New team members consistently find the first study setup confusing.,2023-06-21,13,False,mobile,5.2.0
+446,Dovetail,research repository,1,Storage limits hit quickly when you're recording long sessions. The Figma integration is read-only; I can't push annotations back.,2023-09-22,20,False,desktop,2.1.2
+447,Fieldkit,field research,2,Session sharing links occasionally expire before participants click them.,2023-10-10,33,True,tablet,
+448,Fieldkit,field research,5,The voice memo feature captures context I'd otherwise lose.,2024-03-05,7,True,,
+449,Dovetail,research repository,4,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-07-30,6,False,desktop,
+450,Lookback,user research,5,PDF reports look professional enough to share with executives. The voice memo feature captures context I'd otherwise lose.,2024-09-15,30,True,mobile,
+451,Maze,usability testing,4,The voice memo feature captures context I'd otherwise lose.,2024-02-16,2,True,tablet,4.0.1
+452,Maze,usability testing,5,Automatic session indexing makes it easy to find key moments.,2024-01-17,1,True,desktop,4.1.0
+453,Maze,usability testing,4,Smart folders auto-populate based on tags — surprisingly powerful.,2023-04-11,14,True,,4.2.3
+454,Miro,collaborative whiteboard,5,Permissions are granular enough that clients can view but not edit.,2024-09-11,41,True,mobile,
+455,Miro,collaborative whiteboard,3,The fundamentals are strong; the extras feel half-finished.,2024-05-11,33,False,mobile,9.3.0
+456,Fieldkit,field research,4,The tagging workflow is intuitive once you get used to it. Screener templates saved me from writing survey questions from scratch.,2023-05-19,33,False,,2.5.0
+457,Fieldkit,field research,3,"Works fine — nothing remarkable, nothing broken.",2023-03-01,15,True,desktop,2.5.0
+458,Fieldkit,field research,5,The onboarding checklist is paced well — not overwhelming. One-click export to Notion is a feature I use every week.,2024-02-11,40,False,mobile,
+459,Fieldkit,field research,3,Good enough for most projects but I always end up exporting to a spreadsheet anyway.,2024-08-31,28,True,desktop,
+460,Miro,collaborative whiteboard,5,Permissions are granular enough that clients can view but not edit. CSV export includes everything I need for further analysis.,2023-10-19,1,True,desktop,
+461,Dovetail,research repository,5,Custom fields on participants let me filter by screener criteria.,2024-10-24,14,True,,1.8.4
+462,Maze,usability testing,5,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2024-11-29,0,True,tablet,4.2.3
+463,Dovetail,research repository,5,Works offline and syncs when I get back to WiFi — essential for fieldwork. Template library covers most of my research formats out of the box.,2024-10-20,17,True,tablet,1.9.0
+464,Miro,collaborative whiteboard,5,PDF reports look professional enough to share with executives. The guest access feature is perfect for external stakeholders.,2024-09-30,25,True,mobile,9.1.0
+465,Fieldkit,field research,4,Template library covers most of my research formats out of the box.,2024-08-31,38,True,tablet,
+466,Fieldkit,field research,4,Permissions are granular enough that clients can view but not edit.,2023-10-11,16,True,tablet,3.0.0
+467,Maze,usability testing,3,Reasonable feature set — the UX of the tool itself could use some research.,2023-09-04,3,False,tablet,4.1.0
+468,Lookback,user research,4,Sharing clips with stakeholders takes about 30 seconds.,2024-11-02,31,False,mobile,5.1.2
+469,Maze,usability testing,5,Video clips export cleanly with timecodes intact.,2024-08-20,45,False,mobile,
+470,Dovetail,research repository,4,The onboarding checklist is paced well — not overwhelming.,2024-10-15,30,False,mobile,1.8.4
+471,Maze,usability testing,4,Custom fields on participants let me filter by screener criteria.,2024-07-25,11,True,tablet,4.2.3
+472,Miro,collaborative whiteboard,2,The Figma integration is read-only; I can't push annotations back.,2023-07-07,43,False,tablet,9.2.1
+473,Fieldkit,field research,3,"Works fine — nothing remarkable, nothing broken.",2023-11-11,26,False,desktop,2.5.0
+474,Maze,usability testing,4,GPS tagging for field observations is exactly what I needed.,2023-05-01,30,True,,4.0.1
+475,Lookback,user research,5,Works offline and syncs when I get back to WiFi — essential for fieldwork.,2023-07-19,32,True,,5.1.2
+476,Miro,collaborative whiteboard,4,CSV export includes everything I need for further analysis.,2023-06-04,8,False,mobile,9.2.1
+477,Maze,usability testing,4,Battery drain is reasonable even during long observation sessions. Custom fields on participants let me filter by screener criteria.,2023-03-24,31,True,tablet,4.0.1
+478,Dovetail,research repository,4,The session recording is crisp and easy to scrub through.,2023-08-03,10,True,mobile,1.9.0
+479,Dovetail,research repository,4,Project folders keep multi-phase studies manageable. Video clips export cleanly with timecodes intact.,2024-02-18,27,False,desktop,2.0.0
+480,Miro,collaborative whiteboard,1,The browser extension stops recording silently sometimes.,2023-01-15,20,False,mobile,9.3.0
+481,Lookback,user research,3,"Strong on data collection, weaker on synthesis.",2023-01-05,40,False,mobile,
+482,Dovetail,research repository,5,Permissions are granular enough that clients can view but not edit. The voice memo feature captures context I'd otherwise lose.,2024-08-25,19,True,tablet,2.0.0
+483,Fieldkit,field research,4,Real-time co-editing on affinity diagrams is surprisingly smooth.,2024-09-02,33,True,mobile,
+484,Dovetail,research repository,4,PDF reports look professional enough to share with executives.,2023-06-18,25,True,desktop,1.8.4
+485,Dovetail,research repository,5,I can tag clips without leaving the playback view.,2024-08-26,32,True,,1.9.0
+486,Maze,usability testing,5,Project folders keep multi-phase studies manageable. Template library covers most of my research formats out of the box.,2024-07-01,39,True,desktop,4.2.3
+487,Fieldkit,field research,5,I was running my first study within 20 minutes of signing up. Automatic session indexing makes it easy to find key moments.,2024-03-30,24,True,mobile,
+488,Maze,usability testing,4,I can tag clips without leaving the playback view.,2024-10-07,0,True,desktop,4.2.3
+489,Fieldkit,field research,5,The guest access feature is perfect for external stakeholders.,2023-05-21,26,False,desktop,2.5.3
+490,Fieldkit,field research,4,Works offline and syncs when I get back to WiFi — essential for fieldwork. Automatic session indexing makes it easy to find key moments.,2023-07-23,38,True,desktop,2.4.1
+491,Maze,usability testing,5,Bulk-tagging across sessions is a huge time saver.,2023-10-30,10,True,,4.0.1
+492,Miro,collaborative whiteboard,5,Screener templates saved me from writing survey questions from scratch. The session recording is crisp and easy to scrub through.,2024-11-18,5,False,mobile,
+493,Lookback,user research,5,The tagging workflow is intuitive once you get used to it.,2023-03-18,46,False,mobile,5.3.1
+494,Maze,usability testing,5,PDF reports look professional enough to share with executives. The session recording is crisp and easy to scrub through.,2023-06-28,2,False,mobile,4.0.1
+495,Maze,usability testing,5,Real-time co-editing on affinity diagrams is surprisingly smooth.,2023-04-08,2,True,mobile,4.1.0
+496,Dovetail,research repository,5,Bulk-tagging across sessions is a huge time saver. The voice memo feature captures context I'd otherwise lose.,2023-10-02,46,True,desktop,1.8.4
+497,Maze,usability testing,3,The fundamentals are strong; the extras feel half-finished.,2024-02-14,29,True,desktop,4.2.3
+498,Miro,collaborative whiteboard,5,Video clips export cleanly with timecodes intact.,2023-06-20,7,True,tablet,9.3.0
+499,Fieldkit,field research,5,Custom fields on participants let me filter by screener criteria. Battery drain is reasonable even during long observation sessions.,2024-08-05,43,True,mobile,3.0.0
+500,Lookback,user research,4,The guest access feature is perfect for external stakeholders. Custom fields on participants let me filter by screener criteria.,2024-05-09,31,True,mobile,5.1.2
