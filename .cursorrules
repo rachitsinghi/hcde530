@@ -8774,6 +8774,11 @@ hcde530/
 │   └── pyvenv.cfg
 ├── .vscode/
 │   └── settings.json
+├── MP1/
+│   ├── final_combined.csv
+│   ├── MP1 for Pandas Stars file.csv
+│   ├── star_classification.csv
+│   └── star_dataset.csv
 ├── scripts/
 │   └── refresh_cursorrules_tree.py
 ├── Week 2/
