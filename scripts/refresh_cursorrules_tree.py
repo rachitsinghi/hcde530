@@ -9,8 +9,15 @@ CURSORRULES = REPO / ".cursorrules"
 BEGIN = "<!-- PROJECT_TREE_BEGIN -->"
 END = "<!-- PROJECT_TREE_END -->"
 
-SKIP_NAMES = {".git", "__pycache__", ".DS_Store"}
-SKIP_SUFFIXES = {".pyc"}
+SKIP_NAMES = {
+    ".git", "__pycache__", ".DS_Store",
+    ".venv", "venv", "env",
+    "node_modules",
+    ".ipynb_checkpoints",
+    ".pytest_cache", ".mypy_cache", ".ruff_cache",
+    ".cache", "dist", "build",
+}
+SKIP_SUFFIXES = {".pyc", ".pyo"}
 
 
 def skip_path(path: Path) -> bool:
