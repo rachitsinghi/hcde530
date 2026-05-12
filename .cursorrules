@@ -681,7 +681,8 @@ hcde530/
 │   │   ├── mp1b_visualizations.ipynb
 │   │   ├── star_classification.csv
 │   │   ├── star_dataset.csv
-│   │   └── week5.md
+│   │   ├── week5.md
+│   │   └── week6.md
 │   ├── app_info.csv
 │   ├── app_reviews_demo.csv
 │   ├── penguins_size 2.csv
