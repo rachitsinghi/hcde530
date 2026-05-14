@@ -17,6 +17,15 @@ hcde530/
 │   └── pre-commit
 ├── .vscode/
 │   └── settings.json
+├── MP1/
+│   ├── chart1_felis_3d.png
+│   ├── chart1_felis_3d_wide.png
+│   ├── chart1b_felis_3d.png
+│   ├── chart1b_felis_3d_wide.png
+│   ├── chart2_brightness_by_cluster.png
+│   ├── chart3_spectral_composition.png
+│   ├── MP1 for Pandas Stars file.csv
+│   └── mp1b_visualizations.ipynb
 ├── scripts/
 │   └── refresh_cursorrules_tree.py
 ├── Week 2/

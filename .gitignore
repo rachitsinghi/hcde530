@@ -3,3 +3,7 @@
 **/.env
 .venv/
 **/venv/
+
+# Local notebook execution venv (do not commit)
+.nbexec_venv/
+**/.nbexec_venv/
