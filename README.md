@@ -47,11 +47,11 @@ Add later weeks as `Week 3/`, `Week 4/`, etc., the same way when you have new mo
 
 A pandas-based exploration of real star data to ask whether positional clustering can recover constellation-like groups, whether bright stars carry constellation structure, and what stellar properties characterize different sky regions.
 
-**Notebook:** [`MP1/a5_analysis.ipynb`](MP1/a5_analysis.ipynb)
+**Notebook:** [`Week 5/MP1/a5_analysis.ipynb`](Week%205/MP1/a5_analysis.ipynb)
 
 ### Dataset
 
-[HYG database v4.2](https://www.astronexus.com/projects/hyg) by David Nash / astronexus.com — ~119,626 stars with positions (`ra`, `dec`), distance, apparent and absolute magnitude, color index (`ci`), spectral class (`spect`), luminosity (`lum`), constellation (`con`), and more. The CSV used is `MP1/MP1 for Pandas Stars file.csv`.
+[HYG database v4.2](https://www.astronexus.com/projects/hyg) by David Nash / astronexus.com — ~119,626 stars with positions (`ra`, `dec`), distance, apparent and absolute magnitude, color index (`ci`), spectral class (`spect`), luminosity (`lum`), constellation (`con`), and more. The CSV used is `Week 5/MP1/MP1 for Pandas Stars file.csv`.
 
 ### The three questions
 
@@ -74,7 +74,7 @@ A pandas-based exploration of real star data to ask whether positional clusterin
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn jupyter
-jupyter notebook MP1/a5_analysis.ipynb
+jupyter notebook "Week 5/MP1/a5_analysis.ipynb"
 ```
 
-Then run the cells top-to-bottom. The notebook also expects `MP1/MP1 for Pandas Stars file.csv` to be next to the notebook.
+Then run the cells top-to-bottom. The notebook also expects `Week 5/MP1/MP1 for Pandas Stars file.csv` to be next to the notebook (same folder as `a5_analysis.ipynb`).
