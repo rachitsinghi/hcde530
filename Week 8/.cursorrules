@@ -1,0 +1,195 @@
+# Week 8 / MP2 — Custom Constellation Creator (Star Map)
+
+Context for AI assistants working on **Mini Project 2** in `Week 8/`.  
+Course: **HCDE 530**. Extends **`MP1/mp1b_visualizations.ipynb`** (HYG catalog, naked-eye filter, 2D sky vs 3D distance lesson).
+
+**Project name:** TBD  
+**Track:** **Design** — interface is the product; computation serves UX.  
+**Competency claims (`mp2.md`):** holistic across the project; details later.
+
+---
+
+## Build decisions (authoritative — implement these)
+
+These override the matching lines in **MP2a** where they differ. Document deltas honestly in the **500-word reflection** (e.g. straight-line sketch pad for clearer matching; PNG-first export; lighter Supabase scope).
+
+| Topic | Decision |
+|--------|----------|
+| **Audience** | **General public** (curious non-experts), **astronomy hobbyists**, and **artists** — low friction, playful, visually rich. Educators/communicators are a welcome secondary audience, not the primary framing. |
+| **Drawing** | **Straight-line segments** on a separate **2D sketch pad** (click–click polyline → SVG polyline). Not freehand curves. |
+| **Matching** | On submit: **each polyline vertex** maps to the **nearest visible star** in sky space (approximate; prefer brighter star within a small tie radius, MP1 Felis-style). Lines connect snapped stars on the main map. |
+| **Save / export** | **PNG download is must-have** (constellation on star field). **No required Supabase** for full constellation records, share URLs, or retrieve-later flows. |
+| **Supabase** | **Optional** — if used, **names only**: global uniqueness for AI-generated constellation names (see Naming). Skip Supabase entirely if the demo works with session + classical-name checks only. |
+| **Naming** | Per MP2a: user **text description** → **Claude API** via Lovable **edge function**. Keys only in env, never in git. |
+
+**Also must-have (unchanged):** ~9k stars client-side CSV; 2D default + pan/zoom + 3D toggle; mag/size, ci+spect/color, distance; hover `proper` names on **matched** stars only; Roboto Mono / futuristic galaxy look; Lovable deploy + repo data prep.
+
+---
+
+## MP2a declaration (submitted; see deltas above)
+
+Full text: **`Week 8/MP2a.md`**. Summary:
+
+### 1. Problem
+
+Personal constellations on real stars — draw a shape, geometric match to catalog, AI-generated name.
+
+### 2. Audience (MP2a wording)
+
+Non-experts + educators/communicators. **Build audience** is listed in **Build decisions** (public + hobbyists + artists).
+
+### 3. Data (MP2a)
+
+HYG v4.2, `mag < 6.5`, static CSV client-side; fields include ra, dec, mag, ci, spect, lum, proper name. MP2a also described full constellation rows in Supabase — **build uses optional name registry only** unless the user expands scope.
+
+### 4–6. Track, platform, rationale
+
+**Design track.** **Lovable** + **Claude edge function**. **Supabase** in MP2a for persistence — **optional names-only in build**. Browser-side matching on ~9k stars; no compute backend required.
+
+---
+
+## What we are building
+
+A **deployed creative tool** for the **general public**, **hobbyists**, and **artists**: immersive **galaxy / night-sky** with **~8,835–9,000** HYG stars (`mag < 6.5`); **straight-line sketch pad** → **vertex snap** to real stars on the map; text description → **Claude** name; **2D first**, **pan/zoom**, **3D toggle**; **PNG export**. Optional Supabase table for **used names** only.
+
+**Not in scope unless the user explicitly asks:** full constellation database, share-by-slug, accounts/login, 119k unfiltered HYG in browser, classical-constellation editor.
+
+---
+
+## MP2 submission (formal record)
+
+Public **GitHub repo**: complete code, **`README.md`**, **`mp2.md`**.  
+**Canvas:** repo URL + **Lovable deployment URL** + **500-word reflection** (include scope deltas from MP2a).
+
+**Presentation:** June 3. No invented schedules unless the user asks.
+
+---
+
+## Architecture: lean split
+
+| Layer | Where | Responsibility |
+|--------|--------|------------------|
+| **Data prep** | Repo — `Week 8/` | Filter HYG, precompute `x/y/z`, export **`stars_visible.csv`** for client load. |
+| **Product** | **Lovable** | Star map, sketch pad (polyline), snap + overlay, 2D/3D, Claude naming edge function, **PNG export**. |
+| **Persistence** | **Optional Supabase** | **`used_names`** (or equivalent) only — not required for MP2 minimum. |
+| **Docs** | Repo | `README.md`, `mp2.md`, `MP2a.md`, optional `CONSTELLATION_MAPPING.md`. |
+
+Sync Lovable export into repo for graders. **Never** commit API keys or Supabase service role.
+
+---
+
+## Data source and pipeline
+
+- **Source:** `MP1/MP1 for Pandas Stars file.csv`  
+- **Filter:** `mag < 6.5` (~8,835 stars)  
+- **Reference:** `MP1/mp1b_visualizations.ipynb`  
+- **Client file:** `Week 8/stars_visible.csv` — `id`, `ra`, `dec`, `mag`, `ci`, `spect`, `lum`, `proper`, `dist`, `x`, `y`, `z`  
+- **Prep:** `prepare_stars.py` (document in README)  
+- **Integrity:** Real HYG only; MP1-style checks (Sol, distance sentinels)
+
+---
+
+## Core user flows
+
+### 1. Explore sky (2D default)
+
+- All naked-eye stars (~9k). **Pan/zoom** required.  
+- **mag → size**, **ci / spect → color**, **distance** (especially 3D).  
+- **`proper` on hover** only for **matched** stars.
+
+### 2. Draw and match
+
+1. User draws **straight segments** on sketch pad (polyline / SVG `line`/`polyline`).  
+2. **Normalise** pad coordinates; map to current sky viewport (pan/zoom).  
+3. **Submit** → each **vertex** snaps to **nearest** catalog star (bright-star tie-break optional).  
+4. Render edges between snapped stars on **2D map**; **3D toggle** uses `x,y,z`.  
+5. MP1 honesty: 3D lines can look stretched; 2D is the primary constellation view.
+
+### 3. Name (Claude)
+
+- User describes shape in text.  
+- Edge function → **Claude API** → creative name.  
+- Block **official constellation names** + **session duplicates**. If Supabase enabled: block **global** duplicates via `used_names`.  
+- Name display on UI; **no requirement** to persist full sketch to database.
+
+### 4. Export (PNG only — required)
+
+- **Download PNG** of constellation overlaid on star field (portfolio / artists).  
+- Optional later: SVG, JSON, localStorage — only if user asks.
+
+### 5. View modes
+
+- **2D first** (RA/Dec). **Toggle 3D**.
+
+---
+
+## Visual / UX direction
+
+- Immersive **galaxy**; **geometric**, **futuristic**; **Roboto Mono**.  
+- Speak to **curious public**, **hobbyists**, **artists** — no jargon on primary controls.  
+- Accessible contrast; matched stars visually distinct from field.
+
+---
+
+## Implementation notes
+
+### Vertex-snap (sketch pad → sky)
+
+1. Collect polyline vertices from pad.  
+2. Map pad → RA/Dec for current view.  
+3. Nearest-neighbor per vertex on `stars_visible.csv`; dedupe star IDs.  
+4. Draw overlay edges on 2D and 3D.
+
+### Optional Supabase — names only
+
+```sql
+-- optional; only if global name uniqueness is enabled
+used_names (
+  name text primary key,
+  created_at timestamptz default now()
+)
+```
+
+Do **not** require constellation blob storage for MP2 unless user expands scope.
+
+### Claude edge function
+
+- Input: `{ description }` (+ optional matched star ids).  
+- Output: `{ name }`; validate against classical list + session + optional `used_names`.  
+- Clear error UI if API fails.
+
+### Lovable
+
+- Load `stars_visible.csv` from `public/` or raw GitHub URL.  
+- PNG via `html2canvas` or equivalent.
+
+### Python / git
+
+- `pathlib`; reuse MP1 `mag < 6.5`, `to_xyz()`.  
+- After layout changes: `python3 scripts/refresh_cursorrules_tree.py`
+
+---
+
+## Related files
+
+| File | Why |
+|------|-----|
+| `MP1/mp1b_visualizations.ipynb` | Matching, 2D/3D, data profile |
+| `MP1/mp1.md` | Claim style |
+| `Week 8/MP2a.md` | Submitted declaration (may differ from build) |
+| `PROJECT_CONTEXT.md` | Repo conventions |
+
+---
+
+## Open items
+
+- Project name — TBD  
+- Lovable URL — README when live  
+- `mp2.md` — when build stabilises  
+
+---
+
+## Style
+
+- **Why-focused** comments (HCD / design / data trust).  
+- Minimal scope; flag MP1-style “looks done but wrong” risks.
