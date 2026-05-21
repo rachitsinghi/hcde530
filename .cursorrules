@@ -25,6 +25,7 @@ hcde530/
 │   ├── chart2_brightness_by_cluster.png
 │   ├── chart3_spectral_composition.png
 │   ├── MP1 for Pandas Stars file.csv
+│   ├── mp1.md
 │   └── mp1b_visualizations.ipynb
 ├── scripts/
 │   └── refresh_cursorrules_tree.py

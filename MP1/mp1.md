@@ -1,0 +1,49 @@
+MP1: Competency Claims
+
+C5: Data Analysis with Pandas
+
+The foundation of this project was a pandas analysis of the HYG v4.2 star catalog (119,626 real stars) that used all five operations from class to answer three connected questions about how stars can be grouped into constellation-like structures.
+
+The most instructive moment wasn't running the operations, it was deciding which one to reach for each sub-question. Filtering with `df[df['mag'] < 6.5]` reduced the catalog to ~9,000 naked-eye-visible stars before any clustering happened, which was a consequential choice: running K-Means on all 119,626 stars would have produced clusters dominated by catalog stars too faint to see, making the constellation generator meaningless in practice. `df.isnull().sum()` revealed that roughly 3,000 stars were missing spectral class data, a gap I would not have noticed from `df.head()` alone, which directly changed how Chart 3 was scoped: it uses a filtered subset rather than the full visible population, and the interpretation cell explains why. `groupby('cluster')['mag'].median()` showed that the brightness distribution in every cluster follows the same right-skewed pattern, a dense IQR of dim filler stars near mag 5–6 and a short left whisker reaching 2–4 unusually bright outliers, which answered Q2 not just for one cluster but consistently across all 15. That consistency was the actual finding: it's a structural property of the night sky, not a coincidence of one patch.
+
+The learning I took from this: pandas operations are diagnostic tools, not formatting steps. Running `describe()` before writing any visualization code caught the 100,000-parsec sentinel distance value that would have produced impossible outlier points in the 3D chart and made it look broken for reasons that would have been hard to diagnose after the fact.
+
+**Evidence:** `a5_analysis.ipynb` and `mp1b_visualizations.ipynb` (Section 2, Data Profile and Section 3, Analysis).
+
+C6: Data Visualization
+
+Each of the three charts in this project was chosen using the Abela Chart Chooser framework, matching the data structure and question to a chart family before writing any code, rather than defaulting to a generic bar or scatter and adjusting from there.
+
+Chart 1 (Felis, 2D sky scatter) is a *Relationship* chart: it shows the angular relationship between nine real HYG catalog stars in RA/Dec space, connected to form a cat-face outline. The critical design decision was choosing a 2D sky projection over the 3D Cartesian plot I originally built. The 3D version ran first, and the cat was unrecognizable, because the nine anchor stars sit at real distances between 49 pc and 411 pc, so the connecting lines stretched along the line of sight into an unreadable diagonal slab. Switching to 2D wasn't a compromise; it's the correct representation for the question being asked, because constellations are inherently 2D line-of-sight patterns from Earth's vantage point. I kept the 3D version in the notebook as Chart 1b to show that contrast honestly rather than hiding the failed experiment.
+
+Chart 2 (brightness box plot) is a *Distribution* chart: I needed to see the full distribution shape, median, spread, and outliers, for 15 groups simultaneously, to test whether the bright-anchor pattern held consistently or only appeared in a few clusters. A bar chart of means would have hidden the outliers that were the actual finding. A histogram per cluster would have produced 15 stacked plots that couldn't be compared. The horizontal box plot with navy diamond overlays at mag < 3.0 made the gap between filler stars and bright anchors immediately readable across all 15 groups at once. Sorting by median magnitude rather than cluster ID was a second design decision that made the pattern visible, alphabetical sorting initially made the gradient invisible.
+
+Chart 3 (spectral composition, 100% stacked bar) is a *Composition* chart: I was asking about relative share of spectral classes within each cluster, not absolute counts. A regular stacked bar would have conflated cluster size with composition, since the 15 clusters vary in how many stars they contain. The 100% normalized version isolates the compositional question. Sorting clusters by combined O+B hot-star share descending, rather than by cluster ID, revealed a genuine gradient from 14.7% to 44.1% that would have been invisible in arbitrary order.
+
+**Evidence:** `mp1b_visualizations.ipynb` (Section 3, Analysis), chart justification in each intro cell, and Section 5, Process.
+
+C7: Critical Evaluation and Professional Judgment
+
+Three specific moments in this project required catching AI output before acting on it, and each one had real consequences for the analysis.
+
+The first was the dataset itself. I started with three CSV files and asked Claude to merge them into a unified star catalog. The file came back complete-looking, every row filled, no obvious errors. But Claude flagged that the three files shared no common key, meaning the physical properties (temperature, luminosity, spectral class) had been bootstrap-sampled and randomly reassigned to positions they had no real connection to. A hot blue star might end up at a cool red star's coordinates. Rather than accept the output because it looked finished, I treated the flag as a real concern: a constellation generator built on fabricated correlations would render stars in the wrong colors at the wrong sizes for their positions, silently. I evaluated the recommended alternative (HYG), spot-checked it against published values for Sirius and Betelgeuse to verify the columns were correct, and discarded the merged file entirely. The final notebook uses HYG throughout.
+
+The second was the 3D cat chart. Cursor produced it at my request and it ran without errors, but when I looked at the output, the cat shape was unrecognizable. The connecting lines stretched diagonally rather than tracing a face because the anchor stars sat at very different real distances. I documented this in Section 5 and kept the failed chart in the notebook as Chart 1b rather than hiding it, because the failure itself is the finding: constellation shapes are projection artifacts, not physical structures in space. Showing the failure honestly is more informative than only showing the version that worked.
+
+The third was the "Build Your Own Constellation" interactive section. An earlier version used a Plotly `FigureWidget` with `dragmode='drawline'` and a live widget button, Cursor built it correctly for a local environment. But I knew from the submission requirement that the notebook needed to render on GitHub, where Jupyter widget bridges don't work. I caught that before submitting and rewrote the section as a code-driven dictionary-edit pattern that works in every viewer, including static GitHub rendering. The criterion I used: "would a grader opening this on GitHub see broken widgets or working output?"
+
+The pattern across all three: AI tools produce structurally correct output that is substantively wrong, a complete-looking CSV with fabricated correlations, a chart that runs but is unreadable, an interactive widget that works locally but breaks on submission. The defense in each case was a concrete verification test, not a general sense that something might be off.
+
+**Evidence:** Section 5, Process in `mp1b_visualizations.ipynb`, and the "Build Your Own Constellation" section explaining the widget decision.
+
+C2: Code Literacy and Documentation
+
+The notebook contains working docstrings, inline comments that explain design decisions rather than code mechanics, and a written process narrative that makes the reasoning visible to a non-technical reader.
+
+The `to_xyz()` function has a docstring that specifies what it takes (RA in hours, Dec in degrees, distance in parsecs) and what it returns (Cartesian x, y, z in parsecs), the unit specification matters because the HYG catalog stores RA in hours, not degrees, and a caller who got that wrong would produce rotated positions without any error message. The `view_for_pad()` function's inline comment explains *why* the x-axis range is reversed (`x reversed: RA increases to the LEFT`), that's the standard astronomical convention, and without the comment a reader would think the range was a bug. The Sol exclusion in Chart 2 has a comment explaining the specific problem: its magnitude of -26.7 is technically below the mag < 6.5 filter but would compress the entire x-axis by 30 magnitudes if included, making all other stars invisible. That's not what the code does, it's why the code does it, which is the distinction C2 is asking for.
+
+The Section 5 process narrative functions as documentation for a non-technical reader: it explains what the dataset problem was, what the 3D chart failure revealed, and why the interactive widget was rebuilt, all without assuming the reader can follow the code. A colleague who had never seen the notebook could read Section 5 and understand the three biggest design decisions made during the project and why they went the direction they did.
+
+The learning I took from this: comments that explain *why* are qualitatively different from comments that explain *what*. "Filter to mag < 6.5" describes what the code does. "Filter to naked-eye-visible stars so the clustering reflects stars people can actually see" explains why the threshold is where it is and what would break if you changed it. Writing the second kind forces you to understand the code well enough to defend it, not just run it.
+
+**Evidence:** Docstrings on `to_xyz()` and `view_for_pad()`, inline comments throughout `mp1b_visualizations.ipynb`, and Section 5, Process.
