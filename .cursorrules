@@ -713,7 +713,10 @@ hcde530/
 │   └── week7_figma_feedback.csv
 ├── Week 8/
 │   ├── .cursorrules
-│   └── MP2a.md
+│   ├── extract_quickdraw.py
+│   ├── MP2a.md
+│   ├── prepare_stars.py
+│   └── stars_visible.csv
 ├── .cursorrules
 ├── .gitignore
 ├── PROJECT_CONTEXT.md
