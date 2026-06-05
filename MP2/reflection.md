@@ -1,0 +1,25 @@
+# MP2 Reflection
+
+## What did you build?
+
+Twinkle is a creative web tool that lets anyone invent their own constellation from imagination and see it mapped onto real stars in the night sky. It loads 8,834 real stars from the HYG astronomical catalog — each one sized by apparent magnitude and colored by its B-V color index so the star field looks like the actual night sky. Users draw a shape on a sketch pad using straight-line segments, and when they submit, each vertex of their drawing snaps to the nearest real catalog star. The result is their invented shape rendered as a glowing constellation overlay on the star map. Three input methods exist: drawing manually on the pad, typing a description and having AI fetch a matching icon shape from Iconify's library of 275,000 icons, or drawing with a finger in front of the laptop camera using MediaPipe hand tracking. Once a constellation is drawn, users describe it in plain text and a Groq-powered AI generates a mythological-sounding name. The constellation can be viewed in 2D or 3D, and downloaded as a PNG. On mobile, a rear-camera AR mode uses device orientation to overlay the constellation on the real night sky.
+
+For a collaborator outside the course: a browser-based creative instrument where `StarMap.tsx` renders `public/stars_visible.csv` on Canvas, `SketchHUD.tsx` handles drawing and IMAGINE, and `/api/name-constellation` calls Groq server-side. It turns MP1's analytical question — can a user shape map to real stars? — into an interactive experience.
+
+## What decisions did you make?
+
+The original MP2a declaration proposed full Supabase persistence for constellation records and freehand curve drawing. Both changed. Supabase was scoped down to an optional name registry only — the core experience works entirely without a database, which made the tool simpler and more reliable. Freehand curves were replaced with straight-line polyline segments because constellations are traditionally straight lines between stars, and the snap-to-star algorithm works much more cleanly with discrete vertices than with continuous curves. The platform choice was Lovable because the interface is the product — an immersive galaxy aesthetic in Roboto Mono that needed to look and feel right immediately, which Lovable handles faster than building from scratch. Groq was chosen over Claude for the naming feature because it offers a genuinely free tier with no credit card required, which mattered for a deployed public tool.
+
+Data came from HYG v4.2 filtered in `Week 8/prepare_stars.py` with precomputed x/y/z for `StarMap3D.tsx`. Canvas over SVG for per-star glow; Iconify SVG paths over LLM coordinates for reliable shapes. Cutting Supabase was the hardest call — the product is creation and download, not a shared registry.
+
+## What would you do differently?
+
+Two specific things. First, I would define the shape imagination feature more narrowly from the start. The feature went through four failed approaches before landing on the Iconify SVG solution — LLM coordinate generation, Quick Draw dataset with CORS issues, hardcoded template lists, and few-shot prompting. Defining upfront that the input needed to be an existing visual asset rather than AI-generated geometry would have saved that entire iteration cycle. Second, I would add user location to the AR mode. Right now the device orientation mapping is approximate because it uses compass heading without knowing where on Earth the user is standing, which means the star positions are directionally correct but not precisely aligned. Adding a one-time GPS permission would make the AR astronomically accurate.
+
+I learned that "AI-powered" is not a specification — I needed reliable polyline vertices, not coordinate hallucination. I would write that constraint on day one. For AR, I would add `navigator.geolocation` to `ARSkyView.tsx` and compute local sidereal time so the overlay aligns with the actual sky above the user.
+
+## What does this work demonstrate?
+
+This project demonstrates C6 through the star rendering — real physical properties encoded as visual variables across 8,834 objects. It demonstrates C7 through three documented moments of catching and correcting AI output before it reached users: the coordinate generation failure, the CORS issue with Quick Draw, and the finger tracking sensitivity calibration. It demonstrates C8 through a fully deployed tool at a custom domain with a complete user flow that works end to end on both desktop and mobile. The finger drawing feature using MediaPipe hand tracking and the AR sky view using device orientation both go beyond the assignment minimum and reflect genuine product thinking about what would make the experience feel magical rather than just functional.
+
+C6 is in `StarMap.tsx` — `mag` and `ci` as visual encodings, 3D revealing distance distortion. C7 is rejecting bad AI defaults: Iconify over coordinates, palm-size calibration over fixed thresholds. C8 is Python preprocessing through to Groq on Cloudflare Workers at twinkle.ltd. I came away understanding competencies as decisions embedded in what shipped, not labels added afterward.
