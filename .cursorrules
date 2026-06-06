@@ -121,6 +121,7 @@ hcde530/
 │   ├── vite.config.ts
 │   └── wrangler.jsonc
 ├── scripts/
+│   ├── md_to_pdf.py
 │   └── refresh_cursorrules_tree.py
 ├── Week 2/
 │   ├── demo_dashboard.html
@@ -812,7 +813,9 @@ hcde530/
 │   └── stars_visible.csv
 ├── .cursorrules
 ├── .gitignore
+├── End-of-Quarter Reflection.html
 ├── End-of-Quarter Reflection.md
+├── End-of-Quarter Reflection.pdf
 ├── PROJECT_CONTEXT.md
 └── README.md
 ```
