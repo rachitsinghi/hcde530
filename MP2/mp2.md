@@ -21,11 +21,7 @@ Data visualization is the skill of encoding real measurements as visual properti
 - `mp2_notebook.ipynb` — magnitude, color-index, and distance distributions explored in pandas
 - Live result at https://twinkle.ltd — Betelgeuse orange-red, Rigel blue-white, 3D line distortion on rotation
 
-### Strong vs. weak claim
-
-**Weak:** "I visualized 8,834 stars using React and Three.js."
-
-**Strong:** Naming the exact visual encodings (`mag` → non-linear `Math.max(1, Math.pow(6.5 - mag, 1.5) * 2.5)`; `ci` → discrete hex bands), the files where they live, why Canvas was chosen over SVG for 8,834 glow objects, and what the 2D-to-3D toggle reveals about constellation distance — with a specific MP1 finding (Felis anchor stars 49–411 parsecs apart) made interactive.
+ Naming the exact visual encodings (`mag` → non-linear `Math.max(1, Math.pow(6.5 - mag, 1.5) * 2.5)`; `ci` → discrete hex bands), the files where they live, why Canvas was chosen over SVG for 8,834 glow objects, and what the 2D-to-3D toggle reveals about constellation distance — with a specific MP1 finding (Felis anchor stars 49–411 parsecs apart) made interactive.
 
 ### My claim
 
@@ -67,11 +63,7 @@ Critical evaluation is the skill of catching when a tool, dataset, or AI output 
 - Specific thresholds and results: 15px → 35px → `adjusted_threshold = 55 * (calibrated_palm_size / 80)`; Quick Draw latency 2–8s vs Iconify under 500ms
 - The exact failed Groq prompt for coordinate generation (quoted in Moment 1 below)
 
-### Strong vs. weak claim
-
-**Weak:** "I evaluated AI output and fixed bugs before submitting."
-
-**Strong:** Naming three specific failures (coordinate hallucination, CORS + unreliable latency, twitchy fixed pixel threshold), the exact prompt or URL involved, the architectural decision each one produced, and the measurable result that justified the switch (e.g. Iconify under 500ms vs Quick Draw 2–8 seconds).
+Naming three specific failures (coordinate hallucination, CORS + unreliable latency, twitchy fixed pixel threshold), the exact prompt or URL involved, the architectural decision each one produced, and the measurable result that justified the switch (e.g. Iconify under 500ms vs Quick Draw 2–8 seconds).
 
 ### My claim
 
@@ -118,11 +110,7 @@ Building and deploying a complete tool means shipping something a real user can 
 - Scope decision: Supabase constellation persistence cut from MP2a plan
 - Known seam documented: AR view approximate without GPS (`ARSkyView.tsx`, `deviceorientationabsolute`)
 
-### Strong vs. weak claim
-
-**Weak:** "I deployed my project to a website and it works."
-
-**Strong:** Naming the live URL, every step of the working user journey, specific files that implement each layer (preprocessing script, static CSV, server route for API key, Workers config), one scope cut with reasoning (Supabase removed), and one honest limitation you would fix next (AR needs geolocation for astronomical accuracy).
+Naming the live URL, every step of the working user journey, specific files that implement each layer (preprocessing script, static CSV, server route for API key, Workers config), one scope cut with reasoning (Supabase removed), and one honest limitation you would fix next (AR needs geolocation for astronomical accuracy).
 
 ### My claim
 
