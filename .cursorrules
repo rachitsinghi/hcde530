@@ -17,6 +17,21 @@ hcde530/
 │   └── pre-commit
 ├── .vscode/
 │   └── settings.json
+├── Ask-Rachit-AI/
+│   ├── _assets/
+│   │   ├── collaborated-orgs.png
+│   │   ├── figma-thumb.webp
+│   │   ├── logo-strip.png
+│   │   ├── org-logos.png
+│   │   ├── org-logos2.png
+│   │   └── wix-projects.txt
+│   ├── _audit_home.txt
+│   ├── _audit_images.txt
+│   ├── _audit_wix.txt
+│   ├── _figma_extract.json
+│   ├── _figma_for_knowledge.txt
+│   ├── _figma_text_organized.txt
+│   └── knowledge.txt
 ├── MP1/
 │   ├── chart1_felis_3d.png
 │   ├── chart1_felis_3d_wide.png

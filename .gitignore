@@ -8,3 +8,11 @@ node_modules/
 # Local notebook execution venv (do not commit)
 .nbexec_venv/
 **/.nbexec_venv/
+
+# Ask Rachit AI — local extraction artifacts (may contain large dumps)
+Ask-Rachit-AI/_figma_extract.json
+Ask-Rachit-AI/_figma_for_knowledge.txt
+Ask-Rachit-AI/_figma_text_organized.txt
+Ask-Rachit-AI/_audit_*.txt
+Ask-Rachit-AI/_assets/
+Ask-Rachit-AI/.env
