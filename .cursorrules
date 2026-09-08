@@ -1205,6 +1205,13 @@ hcde530/
 ├── .vscode/
 │   └── settings.json
 ├── Ask-Rachit-AI/
+│   ├── .github/
+│   │   └── workflows/
+│   │       └── deploy.yml
+│   ├── .vercel/
+│   │   ├── cache/
+│   │   ├── project.json
+│   │   └── README.txt
 │   ├── _assets/
 │   │   ├── behance/
 │   │   │   ├── 118759247.jpg
@@ -1218,6 +1225,7 @@ hcde530/
 │   │   │   ├── 118831913.jpg
 │   │   │   ├── 119833371.jpg
 │   │   │   └── 145929869.png
+│   │   ├── water-animation/
 │   │   ├── wix_extra/
 │   │   │   ├── copy-of-work-chair_1.png
 │   │   │   ├── copy-of-work-chair_2.png
@@ -1245,6 +1253,17 @@ hcde530/
 │   │   ├── org-logos.png
 │   │   ├── org-logos2.png
 │   │   └── wix-projects.txt
+│   ├── api/
+│   │   └── chat.js
+│   ├── lib/
+│   │   ├── chunk-knowledge.js
+│   │   └── retrieve.js
+│   ├── public/
+│   │   └── index.html
+│   ├── scripts/
+│   │   └── build-chunks.js
+│   ├── .env.local
+│   ├── .gitignore
 │   ├── _audit_home.txt
 │   ├── _audit_images.txt
 │   ├── _audit_wix.txt
@@ -1254,7 +1273,11 @@ hcde530/
 │   ├── _figma_extract.json
 │   ├── _figma_for_knowledge.txt
 │   ├── _figma_text_organized.txt
-│   └── knowledge.txt
+│   ├── chunks.json
+│   ├── knowledge.txt
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vercel.json
 ├── CVs/
 │   ├── 598 Rachit Singhi - Final CV.pdf
 │   ├── __ Rachit Singhi - Final CV.pdf
@@ -1264,7 +1287,21 @@ hcde530/
 │   ├── Final CVS (1).pdf
 │   ├── Rachit Singhi Transcript (1) (1) (2).pdf
 │   ├── Rachit Singhi Transcript (1) (1).docx
+│   ├── Sample for claude.pdf
 │   └── UWUnofficialTranscript (4).pdf
+├── Framer/
+│   └── PortfolioAboutMe.tsx
+├── framer-pipes/
+│   ├── PipesStack.tsx
+│   └── PipesStack90.tsx
+├── framer-water-animation/
+│   ├── _preview.html
+│   ├── GenethraPipe1.tsx
+│   ├── LiquidCapsule.tsx
+│   ├── PipeCurve.tsx
+│   ├── WaterAnimation.tsx
+│   ├── wave2.svg
+│   └── wave4.svg
 ├── MP1/
 │   ├── chart1_felis_3d.png
 │   ├── chart1_felis_3d_wide.png
@@ -1276,12 +1313,21 @@ hcde530/
 │   ├── mp1.md
 │   └── mp1b_visualizations.ipynb
 ├── MP2/
+│   ├── _assets/
+│   │   └── rendering-proof/
+│   │       ├── canvas-shipped-hd.png
+│   │       ├── canvas-shipped-panel-hd.png
+│   │       ├── comparison-full-hd.png
+│   │       ├── svg-rejected-hd.png
+│   │       └── svg-rejected-panel-hd.png
 │   ├── public/
 │   │   ├── icon-192.png
 │   │   ├── icon-512.png
 │   │   ├── manifest.webmanifest
 │   │   ├── stars_visible.csv
 │   │   └── sw.js
+│   ├── scripts/
+│   │   └── capture-rendering-proof.mjs
 │   ├── src/
 │   │   ├── assets/
 │   │   │   └── icon-master.png
@@ -1363,11 +1409,20 @@ hcde530/
 │   ├── mp2_notebook.ipynb
 │   ├── package-lock.json
 │   ├── package.json
+│   ├── portfolio-twinkle.md
 │   ├── README.md
 │   ├── reflection.md
+│   ├── rendering-proof.html
 │   ├── tsconfig.json
 │   ├── vite.config.ts
 │   └── wrangler.jsonc
+├── Projects/
+│   ├── 536 - A5 - Team 🐳.pdf
+│   ├── 536 - Interactive Prototype Mobile App.pdf
+│   ├── annotated-517_Final_20report (3).pdf
+│   ├── annotated-Design_20Solution.pdf
+│   ├── annotated-Eco-Nudges_20Final_20Paper.pdf
+│   └── The Furious Five_ Final Presentation.pdf
 ├── scripts/
 │   ├── md_to_pdf.py
 │   └── refresh_cursorrules_tree.py
